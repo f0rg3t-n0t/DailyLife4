@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>Chapter 3-DAILY LIFE</title>
+  <title>Chapter 4-DAILY LIFE</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
   <style>
 
@@ -1284,12 +1284,12 @@
         key: 0,
         coin: 0},
               rose1928: {
-        class: "수영선수 미아 콜린스",
+        class: "괴도 로즈 핑크 돌핀",
         id: "RosePinkDolphin",
         STR: 4,
-        INT: 2,
+        INT: 4,
         OBS: 5,
-        POW: 4,
+        POW: 3,
         LUC: 3,
         key: 0,
         coin: 0},
@@ -1678,34 +1678,31 @@ function selectRandomDrink() {
     return;
   }
   const messages = [
-    { title: "토마토 파스타 국물", desc: "추천인 : 제더카이어 어비스" },
-    { title: "스크로베리다크밀크화이트초콜릿솔트카라멜라떼", desc: "추천인 : 미아 콜린스" },
-    { title: "파우더가 잔뜩 올라간 티라미수 오레오 라떼", desc: "추천인 : 미아 콜린스" },
-    { title: "우유를 먼저 넣은 홍차", desc: "추천인 : 리반 에케로스" },
-    { title: "홍차를 먼저 넣은 우유", desc: "추천인 : 리반 에케로스" },
-    { title: "소화를 돕는 매실주스", desc: "추천인 : 요시다 신" },
-    { title: "비락식혜", desc: "추천인 : 요시다 신" },
-    { title: "위스키", desc: "추천인 : 이반 카르포프" },
-    { title: "보드카", desc: "추천인 : 이반 카르포프" },
-    { title: "벨루가 골드", desc: "추천인 : 하누리" },
-    { title: "딸기 잔뜩 파르페", desc: "추천인 : 하누리" },
-    { title: "당도 5% 도라지즙", desc: "추천인 : 공증인" },
-    { title: "버블티", desc: "추천인 : 공증인" },
-    { title: "마시멜로 잔뜩 코코아", desc: "추천인 : 루스티카 테일윈드" },
-    { title: "차이 티 라떼", desc: "추천인 : 공증인" },
-    { title: "달걀 노른자", desc: "추천인 : 공증인" },
-    { title: "달걀 흰자", desc: "추천인 : 공증인" },
-    { title: "솜사탕 녹인 물", desc: "추천인 : 공증인" },
-    { title: "생크림", desc: "추천인 : 공증인" },
-    { title: "휘핑크림", desc: "추천인 : 공증인" },
-    { title: "에스프레소(카페인 함량 10g)", desc: "추천인 : 에디트 발랑틴" },
-    { title: "위스키(알코올 95%)", desc: "추천인 : 에디트 발랑틴" },
-    { title: "솔의 눈", desc: "추천인 : 이사도르 도슨" },
-    { title: "아침 햇살", desc: "추천인 : 이사도르 도슨" },
-    { title: "운동 후 마시는 건강 음료", desc: "추천인 : 원자한" },
-    { title: "대학원생용 6샷 커피", desc: "추천인 : 에르네스토 프로켈" },
-    { title: "팥이 들어가지 않은 차", desc: "추천인 : 에르네스토 프로켈" },
-    { title: "팥차", desc: "추천인 : 태이" }
+    { title: "고농축 에스프레소 (30배 함량)", desc: "추천인 : 하누리" },
+    { title: "스코빌 지수 50만! 고추맛쉐이크", desc: "추천인 : 하누리" },
+    { title: "청어 진액", desc: "추천인 : 미아 콜린스" },
+    { title: "녹차", desc: "추천인 : 미아 콜린스" },
+    { title: "운동 후 먹기 좋은 건강 음료 ver.3", desc: "추천인 : 원자한" },
+    { title: "식초", desc: "추천인 : 이반 카르포프" },
+    { title: "락스", desc: "추천인 : 이반 카르포프" },
+    { title: "우메보시맛 콜라", desc: "추천인 : 에이즈카 아키라" },
+    { title: "간장맛 콜라", desc: "추천인 : 에이즈카 아키라" },
+    { title: "싫어하는 사람이라고 나쁜 거 줄 수 없으니까 코코아!!", desc: "추천인 : 루스티카 테일윈드" },
+    { title: "흙탕물", desc: "추천인 : 모리스 레비" },
+    { title: "따뜻한 꿀우유", desc: "추천인 : 스트로 베리" },
+    { title: "흑당 버블티", desc: "추천인 : 스트로 베리" },
+    { title: "흙탕물", desc: "추천인 : 제더카이어 어비스" },
+    { title: "고추장 스파클링 라떼", desc: "추천인 : 제더카이어 어비스" },    
+    { title: "이산화규소 수용액 1920g", desc: "추천인 : 에디트 발랑틴" },   
+    { title: "염화칼슘 수용액 120g", desc: "추천인 : 에디트 발랑틴" },   
+    { title: "이산화탄소", desc: "추천인 : 리반 에케로스" },   
+    { title: "푸룬주스", desc: "추천인 : 쿠루미 J. 쿠로키" },   
+    { title: "교직원식당의 홍차", desc: "에르네스토 프로켈" },   
+    { title: "용암", desc: "에르네스토 프로켈" },   
+    { title: "소금 99% 소금물", desc: "태이" },   
+    { title: "구마용 성수", desc: "태이" },   
+    { title: "민트초코 파르페", desc: "공증인" },   
+    { title: "석유", desc: "공증인" }
   ];
   const randomIndex = Math.floor(Math.random() * messages.length);
   const msg = messages[randomIndex];
