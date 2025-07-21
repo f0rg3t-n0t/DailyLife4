@@ -726,9 +726,8 @@
   
  <!-- 트레이닝룸 --> 
 <div id="training" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]</span><br><br>다양한 <span style="color: #3f40d3;">운동기구</span>로 체력을 기를 수 있는 트레이닝 룸.<br>머리가 복잡해 힘들 때는 땀을 흘리며 잊어 보는 것은 어떨까?<br>트레이닝 룸 안쪽에는 다른 시설로 이어지는 복도가 나 있다.<br><span style="color: #3f40d3;">수영장</span>과 <span style="color: #3f40d3;">클라이밍장</span>이 있는 것 같다.<br>한쪽에는 <span style="color: #3f40d3;">샤워실</span>도 배치되어 있다.</p>
+<p><span style="font-weight: bold;">[트레이닝 룸]</span><br><br>다양한 <span style="color: #3f40d3;">운동기구</span>로 체력을 기를 수 있는 트레이닝 룸.<br>머리가 복잡해 힘들 때는 땀을 흘리며 잊어 보는 것은 어떨까?<br>트레이닝 룸 안쪽에는 다른 시설로 이어지는 복도가 나 있다.<br>수영장과 <span style="color: #3f40d3;">클라이밍장</span>이 있는 것 같다.<br>한쪽에는 <span style="color: #3f40d3;">샤워실</span>도 배치되어 있다.</p>
     <button onclick="goTo('gigu')">운동기구</button>
-    <button onclick="goTo('swimming')">수영장</button>
     <button onclick="goTo('climbing')">클라이밍장</button>
     <button onclick="goTo('shower')">샤워실</button><br>
     <button class="nav-button" onclick="goTo('4thfloor')">나가기</button>
@@ -752,330 +751,42 @@
    <!-- 운동기구 --> 
 <div id="gigu" class="hidden">
 <p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]</span><br><br>
-다채로운 종류의 운동기구가 놓여 있다.<br>간단한 런닝머신이나 덤벨 같은 것도 있지만, 초보자는 도무지 사용 방법을 알 수 없을 듯한 무시무시한 기구들도 보인다.<br>자세가 틀어졌을 때는 <span style="color: #3f40d3;">거울</span>을 보며 교정해 보자.<br>이왕 온 김에 가볍게 운동을 하고 가는 것도 나쁘지는 않을 것 같은데... 시도해 볼까?</p>
-    <button onclick="goTo('running')">런닝머신</button>
-    <button onclick="goTo('bench')">벤치프레스</button>
-    <button onclick="goTo('whatever')">정체를 알 수 없는 운동기구</button>
-      <button onclick="goTo('mirror')">거울</button><br>
+다채로운 종류의 운동기구가 놓여 있다.<br>하루짜리 운동으로는 이걸로 뭐가 바뀌는지 알기 어려울지도 모르지만...<br> 
+문득 거울 속의 스스로와 눈이 마주쳤다. 전보다 안색이 조금 밝아진 것 같다.<br>보이지 않아도 분명 나아지는 게 있을 것이다.<br>언젠가는 빛나지 않았던 시절의 자신도 소중히 여길 수 있을까...</p>
     <button class="nav-button" onclick="goTo('training')">나가기</button>
- </div> 
-
-     <!-- 런닝머신 --> 
-<div id="running" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[런닝머신]</span><br><br>
-평범한 런닝머신이다.<br>사용자의 컨디션에 맞춘 자동 안내 기능이 탑재되어 있다고 쓰여 있다.</p>
-    <button id="runbtn" onclick="goTodel('running1', 'runbtn')">런닝머신을 탄다</button><br>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-     <!-- 런닝머신 --> 
-<div id="running1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[런닝머신]</span><br><br>
-런닝머신에 올라타 작동 버튼을 누르자... 런닝머신에 부착된 스피커로 공증인의 목소리가 흘러나오기 시작했다...<br><em>"안녕하세요, 유언집행자 님. 가벼운 조깅 코스를 시작하도록 하겠습니다."</em></p>
-    <button onclick="goTo('running2')">꾹 참고 계속 탄다</button>
-    <button onclick="goTo('runningfail')">그만둔다</button><br>
- </div> 
-
-     <!-- 런닝머신 --> 
-<div id="running2" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[런닝머신]</span><br><br>
-<em>"처음부터 무리하지 않고 자신에게 맞는 올바른 강도를 찾아 나가는 과정이 중요합니다."</em><br><br>공증인의 목소리가 끊임없이 들리며 격려와 건강 팁을 안내해 준다...</p>
-    <button onclick="goTo('running3')">꾹 참고 계속 탄다</button>
-    <button onclick="goTo('runningfail')">역시 그만둔다</button><br>
- </div> 
-
-     <!-- 런닝머신 --> 
-<div id="running3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[런닝머신]</span><br><br>
-공증인이 뭐라고 말하든 꾹 참아가며 런닝을 마쳤다.<br>어쩐지 몸 말고 튼튼한 멘탈도 단련된 기분이다...<br>런닝머신을 전부 타고 나자, 가벼운 짤랑 소리와 함께 어디선가 동전 하나가 떨어졌다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-     <!-- 런닝머신 --> 
-<div id="runningfail" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[런닝머신]</span><br><br>
-종료 버튼을 퍽 누르자 공증인의 목소리가 즉시 꺼졌다. 하지만...<br><br>"이런. 건강에 대한 조언을 무시하시다니 유감입니다, 유언집행자 님."<br><br>이번에는 트레이닝룸의 스피커로 공증인의 목소리가...<br>이 런닝머신, 사실은 멘탈 훈련이었나?</p>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-     <!-- 벤.프 --> 
-<div id="bench" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[벤치프레스]</span><br><br>
-근력 운동을 할 수 있는 벤치프레스.<br>벤치에 등을 대고 누운 채로 역기를 들어올리면 된다.</p>
-    <button id="ppbtn" onclick="getpopcorn('ppbtn')">벤치프레스를 사용한다</button><br>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-     <!-- 벤.프 --> 
-<div id="bench1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[벤치프레스]</span><br><br>
-뭘 기대했지? 당연히 역기는 꼼짝도 하지 않았다...<br>계속해서 역기를 붙들고 있었더니 잡은 부분이 따끈해졌다.<br>역기와 조금 친해진 것 같다...</p>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-       <!-- 벤.프 --> 
-<div id="bench2" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[벤치프레스]</span><br><br>
-가뿐하게 역기를 들어올렸다! 이 정도야 식은 죽 먹기다.<br>다음에는 조금 더 무게를 늘려 볼까?</p>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-       <!-- 벤.프 --> 
-<div id="bench3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[벤치프레스]</span><br><br>
-최선을 다해서 역기를 들어올리려 노력했다...<br>가뿐하게는 아니지만, 제법 그럴 듯한 자세로 성공한 것 같다.<br>생각보다 성취감 있을지도?</p>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-     <!-- 이상한 기구 --> 
-<div id="whatever" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[정체불명의 기구]</span><br><br>
-이건 대체 뭐지? 여기저기 핸들과 손잡이가 부착되어 있고, 무거워 보이는 추가 몇 개 달려 있다.<br>어떻게 사용하는 것인지 짐작도 가지 않는다...</p>
-    <button id="wevbtn" onclick="goTodel('whatever1', 'wevbtn')">사용한다</button><br>
-    <button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-  
-     <!-- 이상한 기구 --> 
-<div id="whatever1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[정체불명의 기구]</span><br><br>
-기구 앞에 서자 스르륵... 기계 몸체가 갈라지듯이 열렸다.<br>설마 이 안으로 들어가라는 건가...?</p>
-    <button onclick="goTo('whatever3')">들어간다</button>
- </div> 
-
-       <!-- 이상한 기구 --> 
-<div id="whatever3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[정체불명의 기구]</span><br><br>
-차가운 기계 안에 들어가 서자 시야가 가려지더니...<br>"유언집행자 님의 오늘의 건강 점수는 <span id="recording-score-4"></span><br><span id="comment"></span>"<br>그런 기계음이 들려온 후 몸이 열렸다. ...이거, 뭘 체크한 거지?</p>
-<button class="nav-button" onclick="goTo('gigu')">나가기</button>
- </div> 
-
-<!-- 거울 --> 
-<div id="mirror" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[운동기구]<br>[정체불명의 기구]</span><br><br>
-어디서든 자세를 점검할 수 있도록 대형 거울이 벽에 붙어 있다.<br>익숙한 스스로의 모습이 비친다.</p>
-<button class="nav-button" onclick="goTo('gigu')">나가기</button>
  </div> 
 
       <!-- 클라이밍장 --> 
     <div id="climbing" class="hidden">
     <p><span style="font-weight: bold;">[트레이닝 룸]/[클라이밍장]</span><br><br>
-색다른 운동을 통해 평소에 쓰지 않는 근육을 기를 수 있는 클라이밍장.<br>난이도에 따라 다양한 방식으로 그립이 배치되어 있다.<br>초보자용 코스도 있지만... 잠깐, 지금은 전부 닫혀 있잖아?<br><br>유일하게 이용 가능한 것은 <span style="color: #3f40d3;">불지옥 난이도 코스</span>뿐이다.</p>
-    <button onclick="goTo('climbing1')">불지옥 난이도 코스를 살펴본다</button><br>
+색다른 운동을 통해 평소에 쓰지 않는 근육을 기를 수 있는 클라이밍장.<br>
+다양한 난이도의 코스가 개방되어 있다.<br>오늘도 한 번 시도해 볼까?</p>
+    <button onclick="goTo('climbing1')">코스에 도전한다</button><br>
     <button class="nav-button" onclick="goTo('training')">나가기</button>
     </div>   
 
     <!-- 클라이밍장 --> 
     <div id="climbing1" class="hidden">
     <p><span style="font-weight: bold;">[트레이닝 룸]/[클라이밍장]</span><br><br>
-이런 걸 사람이 할 수 있을 리 없잖아! 라는 생각이 드는 수준으로 띄엄띄엄 배치된 그립이 보인다...<br>하지만 바라보고 있으면 왠지 승부욕이 끓어오른다.</p>
-    <button id="bzobtn" onclick="chall('bzobtn')">불지옥 난이도 코스에 도전한다!</button><br>
-    <button class="nav-button" onclick="goTo('climbing')">나가기</button>
+적당한 난이도의 코스를 택해 그립을 쥐고 오르기 시작했다.<br>그러나 끝까지 올라간 순간, 긴장이 풀린 탓인지 몸에 힘이 빠지면서 발이 미끄러졌다.</p>
+    <button onclick="goTo('climbing2')">눈을 감는다</button><br>
     </div>   
 
     <!-- 클라이밍장 --> 
     <div id="climbing2" class="hidden">
     <p><span style="font-weight: bold;">[트레이닝 룸]/[클라이밍장]</span><br><br>
-해 보기도 전에 포기할 수는 없지! 야심차게 도전했다.<br>하지만 첫 그립을 잡는 순간 깨달았다...<br>여기서 조금도 더 나아갈 수 없다!<br><br>하지만 도전한 것만으로도 의미가 있었다. 격려를 보내듯 허공에서 코인 두 개가 떨어졌다.<br><br><span style="font-weight: bold;">2코인을 획득했다.</span></p>
+반사적으로 눈을 감았지만... 고통은 느껴지지 않는다.<br>다행히 와이어가 천천히 몸을 바닥으로 내려보내 준다.<br>그랬다. 사람은 이렇게 쉽게 죽지는 않는다.<br></p>
     <button class="nav-button" onclick="goTo('training')">나가기</button>
     </div>  
- 
-    <!-- 클라이밍장 --> 
-    <div id="climbing3" class="hidden">
-    <p><span style="font-weight: bold;">[트레이닝 룸]/[클라이밍장]</span><br><br>
-이 정도에 가로막힐 수 없지! 어려운 코스를 자신 있게 돌파했다.<br>쉽지 않았지만 마침내 맨 꼭대기의 그립까지 제대로 터치했다.<br>멋진 승부였다! 허공에서 코인 두 개가 떨어졌다.<br><br><span style="font-weight: bold;">2코인을 획득했다.</span></p>
-    <button class="nav-button" onclick="goTo('training')">나가기</button>
-    </div>   
 
- <!-- 수영장 --> 
-<div id="swimming" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]</span><br><br>액티비티와 함께 하며 고민을 씻어낼 수 있는 수영장. 수영장 특유의 소독약 냄새가 풍긴다.<br>색색의 레인이 설치된 25m짜리 <span style="color: #3f40d3;">메인 풀</span>, 물놀이 장비를 빌릴 수 있는 <span style="color: #3f40d3;">대여소</span>가 있다.<br>수영장 전체를 둘러싸는 형태로 긴 <span style="color: #3f40d3;">워터 슬라이드</span>가 설치되어 있어 눈길을 끈다.</p>
-<button onclick="goTo('mainpool')">메인 풀</button>
-<button onclick="goTo('borrow')">대여소</button>
-<button onclick="goTo('slide')">워터 슬라이드</button><br>
-    <button class="nav-button" onclick="goTo('training')">나가기</button>
- </div> 
-
-   <!-- 메인 풀 --> 
-<div id="mainpool" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[메인 풀]</span><br><br>수영장 하면 떠오르는 이미지를 그대로 구현한 메인 풀.<br>수영의 기초를 연습하거나 다른 사람과 경주를 하기에 딱이다.<br>딱 시원할 정도의 수온이 기분 좋다.</p>
-    <button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-
-     <!-- 대여소 --> 
-<div id="borrow" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-'대여소'라는 간판이 확 눈에 들어오는 부스.<br>수영장이나 물가에서 이용할 수 있는 다양한 장비를 빠짐없이 구비하고 있는 것 같다.<br>
-<span style="color: #3f40d3;">튜브</span>를 빌리거나, <span style="color: #3f40d3;">나만의 장비 세트</span>를 빌릴 수 있다고 쓰여 있다.<br>나만의 장비 세트...?</p>
-  <button onclick="goTo('tube')">튜브 빌리기</button>
-<button onclick="goTo('setgame')">나만의 장비 세트 빌리기</button><br>
-    <button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div>
-
-       <!-- 대여소:튜브 --> 
-<div id="tube" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-원하는 모양의 튜브를 빌릴 수 있다.<br>이곳에서 수영 연습을 위해 사용하거나, 바다에 가지고 나가 해수욕을 즐길 수도 있을 것 같다.</p>
-    <button id="aaam" onclick="goTodel('tube1', 'aaam')">빌린다</button><br>
-    <button class="nav-button" onclick="goTo('borrow')">나가기</button>
- </div> 
-
-       <!-- 대여소:튜브 --> 
-<div id="tube1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-어떤 튜브를 빌릴까?</p>
-  <button onclick="goTo('tube2')">평범한 튜브</button>
-    <button onclick="goTo('tube3')">돌고래 모양 튜브</button>
-    <button onclick="goTo('tube4')">피자 모양 튜브</button>
- </div> 
-
-       <!-- 대여소:튜브 --> 
-<div id="tube2" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-평범한 원형 튜브를 빌렸다. 조금 밋밋하지만, 물놀이의 정석 하면 이 튜브!</p>
-  <button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-
-         <!-- 대여소:튜브 --> 
-<div id="tube3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-돌고래 모양 튜브를 빌렸다. 물살을 가르는 한 마리 바다 생물이 되어 보자.</p>
-  <button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-
-         <!-- 대여소:튜브 --> 
-<div id="tube4" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-피자 모양 튜브를 빌렸다. 바다 위를 한가롭게 떠다니는 피자 한 조각이 되어 보자.</p>
-  <button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-  
-       <!-- 대여소:나.장.빌 --> 
-<div id="setgame" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-"나만의 개성이 듬뿍 담긴 물놀이 장비 세트를 만들어 보세요."<br>라고 쓰여 있다.<br>한 번 해 볼까?</p>
-  <button id="stgm" onclick="goTodel('setgame1', 'stgm')">빌린다</button><br>
-    <button class="nav-button" onclick="goTo('borrow')">나가기</button>
- </div> 
-
-         <!-- 대여소:나.장.빌 --> 
-<div id="setgame1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-대여소 부스 앞에 서자, 갑자기 세 개의 아이템이 튀어나왔다!<br>하나를 골라야 하는 것 같다...</p>
-<button onclick="increaseStatAndGo('beauty', 'setgame2')">꽃으로 화사하게 장식된 물총</button><br>
-<button onclick="increaseStatAndGo('power', 'setgame2')">바주카포를 닮은 물총</button><br>
-<button onclick="increaseStatAndGo('funny', 'setgame2')">음료수인 척하는 물총</button><br>
- </div> 
-
-         <!-- 대여소:나.장.빌 --> 
-<div id="setgame2" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-다시 한 번 세 개의 아이템이 튀어나왔다!<br>하나를 골라야 하는 것 같다...</p>
-<button onclick="increaseStatAndGo('funny', 'setgame3')">해바라기 선글라스</button><br>
-<button onclick="increaseStatAndGo('beauty', 'setgame3')">예쁜 밀짚모자</button><br>
-<button onclick="increaseStatAndGo('power', 'setgame3')">카리스마 선글라스</button><br>
- </div> 
-
-         <!-- 대여소:나.장.빌 --> 
-<div id="setgame3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-다시 한 번 세 개의 아이템이 튀어나왔다!<br>하나를 골라야 하는 것 같다...</p>
-<button onclick="increaseStatAndGo('funny', 'setgame4')">펀치 파마 가발</button><br>
-<button onclick="increaseStatAndGo('power', 'setgame4')">험악한 문신 스티커</button><br>
-<button onclick="increaseStatAndGo('beauty', 'setgame4')">인어 꼬리</button><br>
- </div> 
-
-         <!-- 대여소:나.장.빌 --> 
-<div id="setgame4" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-다시 한 번 세 개의 아이템이 튀어나왔다!<br>하나를 골라야 하는 것 같다...</p>
-<button onclick="increaseStatAndGo('power', 'setgame5')">맥주인 척하는 탄산음료</button><br>
-<button onclick="increaseStatAndGo('beauty', 'setgame5')">반투명한 파란색 사탕</button><br>
-<button onclick="increaseStatAndGo('funny', 'setgame5')">수염 모양 젤리</button><br>
- </div> 
-
-         <!-- 대여소:나.장.빌 --> 
-<div id="setgame5" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[대여소]</span><br><br>
-모든 아이템을 고르자, 부스 안에서 안내음이 들려온다.<br><br><span id="setgame-message"></span><br><br>이 장비를 그대로 대여해도 될 것 같다.</p>
-<button class="nav-button" onclick="goTo('borrow')">나가기</button>
- </div> 
-  
-       <!-- 워터 슬라이드 --> 
-<div id="slide" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-꽤 큰 규모의 워터 슬라이드. 깎아지른 듯한 경사를 지켜보는 것만으로도 스릴을 느낄 수 있을 것 같다.</p>
-<button id="faaam" onclick="goTodel('slide1', 'faaam')">워터 슬라이드를 탄다</button><br>
-<button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-
-<!-- 워터 슬라이드 --> 
-<div id="slide1" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-튜브를 탄 채로 워터 슬라이드에서 하강했다!<br>엄청난 속도감과 함께 짜릿함이 느껴진다.<br><br>정말 즐거웠다...<br>한 번 더 탈까?</p>
-<button onclick="goTo('slide2')">한 번 더 탄다</button><br>
-<button class="nav-button" onclick="goTo('slidestop')">그만둔다</button>
- </div> 
-
-  <!-- 워터 슬라이드 --> 
-<div id="slidestop" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-이 정도로 즐거울 때 멈추는 게 좋겠지. 워터 슬라이드에서 내려와 튜브를 반납했다.</p>
-<button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
-  
-  <!-- 워터 슬라이드 --> 
-<div id="slide2" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-이번에는 더더욱 기세 좋게 미끄러졌다! 귓가에서 바람 소리가 윙윙 울릴 정도다.<br><br>한 번 더 탈까?</p>
-<button onclick="goTo('slide3')">한 번 더 탄다</button><br>
-<button class="nav-button" onclick="goTo('slidestop')">그만둔다</button>
- </div> 
-  <!-- 워터 슬라이드 --> 
-<div id="slide3" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-빙글빙글 회전하면서 워터 슬라이드를 타고 내려왔다!<br>윽, 슬슬 멀미가 나는데...<br><br>그래도 한 번 더 탈까?</p>
-<button onclick="goTo('slide4')">한 번 더 탄다</button><br>
-<button class="nav-button" onclick="goTo('slidestop')">그만둔다</button>
- </div> 
-
-  <!-- 워터 슬라이드 --> 
-<div id="slide4" class="hidden">
-<p><span style="font-weight: bold;">[트레이닝 룸]/[수영장]<br>[워터 슬라이드]</span><br><br>
-튜브를 거꾸로 탄 채로 워터 슬라이드를 타고 내려왔다!<br>네 번이나 연속해서 타고 나니 속이 울렁거린다...<br><br>워터 슬라이드를 마스터했다.<br>이만 나가기로 하자.</p>
-<button class="nav-button" onclick="goTo('swimming')">나가기</button>
- </div> 
 
   <!-- 샤워실 --> 
     <div id="shower" class="hidden">
     <p><span style="font-weight: bold;">[트레이닝 룸]/[샤워실]</span><br><br>
-운동으로 지쳤을 때 땀을 씻어낼 수 있는 샤워실.<br><span style="color: #3f40d3;">세면대</span>와 <span style="color: #3f40d3;">화장대</span>는 공용이지만, 샤워 부스는 전부 개인용이다.</p>
-    <button onclick="goTo('shower1')">세면대</button>
-    <button onclick="goTo('shower2')">화장대</button><br>
+운동으로 지쳤을 때 땀을 씻어낼 수 있는 샤워실.<br>세면대 위의 콘센트에는 방수 커버가 씌워져 있고, 벽에 안내문이 하나 새로 붙었다.<br>「감전 주의」</p>
     <button class="nav-button" onclick="goTo('training')">나가기</button>
     </div>   
 
-    <!-- 세면대 --> 
-    <div id="shower1" class="hidden">
-    <p><span style="font-weight: bold;">[트레이닝 룸]/[샤워실]<br>[세면대]</span><br><br>
-땀을 흘릴 정도의 운동을 하지 않았다면 가볍게 세수를 하고 가는 것도 괜찮을 것 같다.</p>
-    <button onclick="goTo('shower1-1')">세수를 한다</button><br>
-    <button class="nav-button" onclick="goTo('shower')">나가기</button>
-    </div>   
-
-    <!-- 세면대 --> 
-    <div id="shower1-1" class="hidden">
-    <p><span style="font-weight: bold;">[트레이닝 룸]/[샤워실]<br>[세면대]</span><br><br>
-뽀득뽀득 얼굴을 씻었다. 한결 상쾌해진 기분이다!</p>
-    <button class="nav-button" onclick="goTo('shower')">나가기</button>
-    </div>   
-
-    <!-- 화장대 --> 
-    <div id="shower2" class="hidden">
-    <p><span style="font-weight: bold;">[트레이닝 룸]/[샤워실]<br>[화장대]</span><br><br>
-샤워 후 스킨 케어를 할 수 있는 화장대.<br>드라이기, 고데기, 손 건조기 등이 완비되어 있다.</p>
-    <button class="nav-button" onclick="goTo('shower')">나가기</button>
-    </div>   
-  
     <!-- 카페 --> 
     <div id="cafe" class="hidden">
     <p><span style="font-weight: bold;">[카페]</span><br><br>
