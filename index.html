@@ -1489,26 +1489,20 @@
   
 //★★★★★환영 메시지★★★★★
 //★★★★★환영 메시지★★★★★
-function showWelcomeMessage(userClass) {
-  document.getElementById('login-page').classList.add('hidden');
-  const container = document.createElement('div');
-  container.classList.add('typewriter');
-  container.innerHTML = `초세계급 ${userClass} 님을 환영합니다. . .`;
-  document.body.appendChild(container);
+    function showWelcomeMessage(userClass) {
+      document.getElementById('login-page').classList.add('hidden');
+      const container = document.createElement('div');
+      container.classList.add('typewriter');
+      container.innerHTML = `초세계급 ${userClass} 님을 환영합니다. . .`;
+      document.body.appendChild(container);
+      setTimeout(() => {
+        container.remove();
+        showUserInfo();
+        document.getElementById('main-page').classList.remove('hidden');
+        pageHistory.push('main-page');
+      }, 3600);
+    }
 
-  setTimeout(() => {
-    container.remove();
-    showUserInfo();
-
-    // ✅ 특정 유저면 lore01로, 아니면 기존대로 main-page로
-    const targetPage = (typeof currentUser !== 'undefined' && currentUser.id === "LoremIpsum")
-      ? "lore01"
-      : "main-page";
-
-    document.getElementById(targetPage).classList.remove('hidden');
-    pageHistory.push(targetPage);
-  }, 3600);
-}
     
 //★★★★★유저 인포메이션 창★★★★★
     function showUserInfo() {
