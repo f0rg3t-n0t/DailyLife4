@@ -434,16 +434,15 @@
           <!-- 항구 : 백사장 --> 
       <div id="sand" class="hidden">
     <p><span style="font-weight: bold;">[항구]<br>[백사장]</span><br><br>
-    끝없는 바다와 모래사장이 시야를 채운다.<br>너울거리는 파도가 흰 모래에 섞여 부서지고, 열기를 싣은 바람이 피부를 간질인다.<br>기분 좋은 날씨를 만끽할 수 있는 백사장.<br>육지와 가까운 곳에 <span style="color: #3f40d3;">망원경</span>이 몇 개 설치되어 있다.</p>
-    <button id="mangwongyeong" onclick="goTodel('sand1', 'mangwongyeong')">망원경을 사용한다</button><br>
+    끝없는 바다와 모래사장이 시야를 채운다.<br>너울거리는 파도가 흰 모래에 섞여 부서지고, 열기를 싣은 바람이 피부를 간질인다.<br>기분 좋은 날씨를 만끽할 수 있는 백사장.<br>육지와 가까운 곳에 <span style="color: #3f40d3;">바캉스 존</span>이 보인다... 이건 뭐지?<br>조금 떨어진 곳에 <span style="color: #3f40d3;">음료 디스펜서 V4.0</span>도 놓여 있다.<br>V4.0...?</p>
+    <button onclick="goTo('zone')">바캉스 존</button>
+    <button onclick="goTo('dispenser')">음료 디스펜서 V4.0</button><br>     
     <button class="nav-button" onclick="goTo('port1')">나가기</button>
   </div>
 
-
-  
   <!-- 백사장 : 음료 디스펜서 --> 
   <div id="dispenser" class="hidden">
-  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
+  <p><span style="font-weight: bold;">[항구]/[백사장]<br>[음료 디스펜서]</span><br><br>
   커피나 차 등의 음료를 자유롭게 이용 가능한 디스펜서.<br>기본적인 음료는 물론, 여러 가지 맛의 원두와 티백, 시럽도 비치되어 있어 얼마든지 원하는 음료를 제조 가능할 것 같다.<br>
   한쪽에는 '랜덤 디스펜서 : 1일 3회 이용 가능' 이라고 적힌 익숙한 상자가 있다.<br>그러고 보니 랜덤 음료 응모함이 보이지 않는다. 이제 공모전은 끝인 걸까?</p>
   <button onclick="goTo('dispenser1')">음료를 뽑는다</button><br>
@@ -452,7 +451,7 @@
   
   <!-- 카페 : 음료 디스펜서 1 (음료를 뽑는다) -->
   <div id="dispenser1" class="hidden">
-  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
+  <p><span style="font-weight: bold;">[항구]/[백사장]<br>[음료 디스펜서]</span><br><br>
   원하는 음료를 가져가거나 랜덤 디스펜서를 이용해 보자. 랜덤 디스펜서는 1일 3회 사용 제한이 있다.<br><br>이번 주의 랜덤 디스펜서 테마는 '싫어하는 사람에게 주고 싶은 음료'라고 한다.</p>
   <button onclick="selectDrink('mango')">망고 주스</button>
   <button onclick="selectDrink('soda')">소다 플로트</button>
@@ -462,18 +461,85 @@
   <button class="nav-button" onclick="goTo('dispenser')">나가기</button>
 </div>
 
-    <!-- 영화관 : 음료 디스펜서 2 (음료 공모전) -->
-  <div id="dispenser2" class="hidden">
-  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
-  "다음 주의 랜덤 음료 공모전 테마는... ＜싫어하는 사람에게 권하고 싶은 음료＞! <br>유언집행자 여러분의 많은 참여 바랍니다!"<br><br>...라고 쓰여 있다. 한 사람당 2개까지 응모 가능한 모양이다.</p>
-   <input type="text" id="gongmo">
-  <div id="gongmobox" style="display: block; margin-top: 1em;">
-  <button onclick="addgongmo()">확인</button>
+         <!-- 항구 : 백사장 --> 
+      <div id="zone" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+    '바캉스 존'이라는 큰 팻말이 걸린 곳은 완전히 해수욕장으로 단장한 상태다.<br>모래성을 쌓을 수 있는 도구들, 캠프파이어용 장작, 각종 튜브와 물놀이 장비...<br>너무 멀리 헤엄쳐 가지 않도록 부표가 마련되어 있다.<br>다양한 활동을 즐길 수 있을 것 같다.</p>
+    <button id="zone1btn" onclick="goTodel('zone1', 'zone1btn')">모래성 쌓기</button><br>
+    <button id="zone2btn" onclick="goTodel('zone2', 'zone2btn')">캠프파이어 하기</button><br>
+    <button id="zone3btn" onclick="goTodel('zone3', 'zone3btn')">바다에서 수영하기</button><br>
+    <button class="nav-button" onclick="goTo('zone')">나가기</button>
   </div>
-    <p id="gongmo-result"></p>
-  <button class="nav-button" onclick="goTo('dispenser')">나가기</button>
-</div>
 
+           <!-- 항구 : 백사장 --> 
+      <div id="zone1" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+  작은 플라스틱 삽과 모양틀, 양동이 등이 있다.<br>원하는 모양의 모래성을 만들어 보자.<br>기록체를 위해 모래성 쌓기를 도와줄 로봇 팔이 설치되어 있다.</p>
+  <button onclick="goTo('zone1-1')">귀여운 동물 모양 모래성을 조각한다</button><br> 
+  <button onclick="goTo('zone1-2')">모래를 최대한 높게 쌓아 거대 모래성을 만든다</button><br> 
+  <button onclick="goTo('zone1-3')">모래성으로 정교한 성곽을 만든다</button><br> 
+  </div>
+
+            <!-- 항구 : 백사장 --> 
+      <div id="zone1-1" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+  귀여운 강아지와 고양이 모양 모래성을 만들었다! 보고만 있어도 마음이 따뜻해진다...<br>그런데 갑자기 등 뒤에서부터 강한 바람이 분다!<br>이럴 때는... 어떡하지?!</p>
+  <button onclick="goTo('zone1-4')">온몸으로 모래성을 방어한다</button><br> 
+  <button onclick="goTo('zone1-5')">아무것도 하지 않고 모래성을 믿어 준다</button><br> 
+  <button onclick="goTo('zone1-6')">옆에 놓인 파라솔로 바람을 막아 본다</button><br> 
+  </div>
+
+              <!-- 항구 : 백사장 --> 
+      <div id="zone1-2" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+ 거대하고 높은 모래성을 만들었다! 웅장함이 느껴진다...<br>그런데 갑자기 등 뒤에서부터 강한 바람이 분다!<br>이럴 때는... 어떡하지?!</p>
+  <button onclick="goTo('zone1-4')">온몸으로 모래성을 방어한다</button><br> 
+  <button onclick="goTo('zone1-5')">아무것도 하지 않고 모래성을 믿어 준다</button><br> 
+  <button onclick="goTo('zone1-6')">옆에 놓인 파라솔로 바람을 막아 본다</button><br> 
+  </div>
+              <!-- 항구 : 백사장 --> 
+      <div id="zone1-3" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+정교한 성곽을 만들었다! 마치 예술 작품을 보는 것 같다...<br>그런데 갑자기 등 뒤에서부터 강한 바람이 분다!<br>이럴 때는... 어떡하지?!</p>
+  <button onclick="goTo('zone1-4')">온몸으로 모래성을 방어한다</button><br> 
+  <button onclick="goTo('zone1-5')">아무것도 하지 않고 모래성을 믿어 준다</button><br> 
+  <button onclick="goTo('zone1-6')">옆에 놓인 파라솔로 바람을 막아 본다</button><br> 
+  </div>
+
+              <!-- 항구 : 백사장 --> 
+      <div id="zone1-4" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+정신없는 와중 모래성을 방어하려 했다가... 우당탕!<br>앞으로 고꾸라지고 말았다.<br>모래성은 처참하게 무너지고 말았다...</p>
+      <button class="nav-button" onclick="goTo('zone')">나가기</button>
+  </div>
+
+              <!-- 항구 : 백사장 --> 
+      <div id="zone1-5" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+이 정도 바람에 질 리가 없어! 모래성을 믿어 주기로 했다...<br><br>믿음의 힘인지, 모래성은 무사했다...!<br>옆에서 로봇 팔이 1코인을 내밀었다. 모래성을 완성한 상일까?<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
+      <button class="nav-button" onclick="goTo('zone')">나가기</button>
+  </div>
+              <!-- 항구 : 백사장 --> 
+      <div id="zone1-6" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+허겁지겁 파라솔을 가져다 댔다.<br>하지만... 이럴 수가!<br>파라솔은 휘이잉 소리를 내며 바람에 날려 가고 말았다...<br>파라솔에 맞은 모래성이 바스라졌다. 이럴 수가...</p>
+      <button class="nav-button" onclick="goTo('zone')">나가기</button>
+  </div>
+
+           <!-- 항구 : 백사장 --> 
+      <div id="zone2" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+캠프파이어를 위한 장작이 준비되어 있다.<br>아직 낮이긴 하지만, 조그맣게 미리 만들어 보는 것도 나쁘지 않을지도?</p>
+  <button onclick="goTo('zone1-1')">뭐할까나...</button><br> 
+  </div>
+
+             <!-- 항구 : 백사장 --> 
+      <div id="zone3" class="hidden">
+    <p><span style="font-weight: bold;">[항구]/[백사장]<br>[바캉스 존]</span><br><br>
+튜브와 구명조끼 등이 배치되어 있어 바다에서 수영하는 것도 가능할 것 같다.</p>
+  <button onclick="goTo('zone1-1')">어쩔까나...</button><br> 
+  </div>
+  
     <!-- 2층 --> 
     <div id="2ndfloor" class="hidden">
     <p><span style="font-weight: bold;">[2층]</span><br><br>왼쪽 복도는 내빈용 객실로, 오른쪽 복도는 회의실로 이어진다.<br>2층은 이미 둘러보았으니 다른 층을 확인하자.</p>
@@ -1853,6 +1919,15 @@ function increaseStatAndGo(statName, targetPage) {
   }
 
   currentUser[statName] += 1;
+  goTo(targetPage);
+}
+//스탯에 이름 넣고 고투
+function setStatAndGo(statName, value, targetPage) {
+  if (!currentUser) return;
+
+  // 해당 스탯에 원하는 값을 할당
+  currentUser[statName] = value;
+
   goTo(targetPage);
 }
 
