@@ -340,67 +340,26 @@
 
     <!-- 로비:카운터 --> 
     <div id="counter" class="hidden">
-    <p><span style="font-weight: bold;">[로비]<br>[카운터]</span><br><br>보통이라면 직원이 서 있어야 할 카운터 너머에는 아무도 없다. 가까이 다가가자 공증인의 목소리가 울린다.<br><br><em>"유언집행자 님, 안녕하신가요."</em><br><br><em>"오늘도 퀴즈를 준비했습니다. 새로운 장소를 꼼꼼히 둘러보고 오시면 도움이 될 겁니다."</em></p>
-    <button onclick="goTo('notary')">공증인과 대화하기</button><br>
+    <p><span style="font-weight: bold;">[로비]<br>[카운터]</span><br><br>오늘은 공증인의 목소리가 들리지 않는다...</p>
     <button class="nav-button" onclick="goTo('lobby')">나가기</button>
  </div>
-  
-    <!-- 로비:카운터:notary --> 
-    <div id="notary" class="hidden">
-    <p><span style="font-weight: bold;">[로비]/[카운터]<br>[공증인]</span><br><br>스피커를 통해 흘러나오는 목소리는 정중하지만, 마냥 신뢰할 수는 없다...<br><em>"어떤 일을 도와드릴까요?"</em></p>
-    <button id="nota1" onclick="goTodel('notary1', 'nota1')">유언 집행의 보상에 대해서</button><br>
-    <button id="nota2" onclick="goTodel('notary2', 'nota2')">새로운 시설에 대하여</button><br>
-    <button onclick="goTo('notary4')">퀴즈를 푼다</button><br>
-    <button class="nav-button" onclick="goTo('counter')">대화를 끝낸다</button>
- </div>
-  
-    <!-- 로비:카운터:notary1 --> 
-    <div id="notary1" class="hidden">
-    <p><span style="font-weight: bold;">[로비]/[카운터]<br>[공증인]</span><br><br><em>"아무런 보상도 없이 살해를 강요할 수는 없는 노릇이겠지요.<br>여러분의 마음을 움직이는 보상을 찾기 위해 매번 최선을 다하고 있습니다.<br>기대해 주세요."</em></p>
-    <button class="nav-button" onclick="goTo('notary')">다른 이야기</button>
- </div>
-  
-    <!-- 로비:카운터:notary2 --> 
-    <div id="notary2" class="hidden">
-    <p><span style="font-weight: bold;">[로비]/[카운터]<br>[공증인]</span><br><br><em>"처음부터 모든 시설을 개방하면 놀라실까 싶어, 조금씩 보여드리고 있습니다.<br>그렇다고는 해도 여러분을 위해 준비된 공간은 4층이 마지막이군요.<br>마음에 드셨는지요?"</em></p>
-    <button class="nav-button" onclick="goTo('notary')">다른 이야기</button>
- </div>
 
-      <!-- 로비:카운터:notary4 --> 
-    <div id="notary4" class="hidden">
-    <p><span style="font-weight: bold;">[로비]/[카운터]<br>[공증인]</span><br><br><em>"그럼 문제입니다. 4층의 불한증막 내부 온도는 몇 도일까요?"</em><br><br>숫자만 입력하자.</p>
-    <input type="text" id="secret-code-input">
-    <div id="codebox">
-    <button onclick="checkSecretCode()">확인</button>
-  </div>
-    <p id="secret-code-result"></p>
-    <button class="nav-button" onclick="goTo('notary')">다른 이야기</button>
- </div>
-  
-      <!-- 로비:카운터:notary5 --> 
-    <div id="notary5" class="hidden">
-    <p><span style="font-weight: bold;">[로비]/[카운터]<br>[공증인]</span><br><br><em>"정답입니다. 이용하신 소감은 어떠신가요?"</em><br><br>짝짝짝, 박수 소리가 울리나 싶더니 어느새 카운터 위에 동전 두 개가 놓여 있다. 퀴즈를 맞힌 보상인 것 같다.<br><span style="font-weight: bold;">2코인을 획득했다.</span></p>
-    <button class="nav-button" onclick="goTo('notary')">다른 이야기</button>
- </div>
-  
-
-  <!-- 카페 : 음료 디스펜서 --> 
+  <!-- 백사장 : 음료 디스펜서 --> 
   <div id="dispenser" class="hidden">
   <p><span style="font-weight: bold;">[카페]/[카페 카운터]<br>[메뉴판]</span><br><br>
   커피나 차 등의 음료를 자유롭게 이용 가능한 디스펜서.<br>기본적인 음료는 물론, 여러 가지 맛의 원두와 티백, 시럽도 비치되어 있어 얼마든지 원하는 음료를 제조 가능할 것 같다.<br>
-  한쪽에는 '랜덤 디스펜서 : 1일 3회 이용 가능' 이라고 적힌 익숙한 상자가 있다.<br>그 옆에는 '랜덤 음료 공모전' 이라고 적힌 투표함이 놓여 있다.</p>
-  <button onclick="goTo('dispenser1')">음료를 뽑는다</button>
-  <button onclick="goTo('dispenser2')">랜덤 음료 공모전</button><br>
+  한쪽에는 '랜덤 디스펜서 : 1일 3회 이용 가능' 이라고 적힌 익숙한 상자가 있다.<br>그러고 보니 랜덤 음료 응모함이 보이지 않는다. 이제 공모전은 끝인 걸까?</p>
+  <button onclick="goTo('dispenser1')">음료를 뽑는다</button><br>
   <button class="nav-button" onclick="goTo('menupan')">나가기</button>
   </div>
   
   <!-- 카페 : 음료 디스펜서 1 (음료를 뽑는다) -->
   <div id="dispenser1" class="hidden">
   <p><span style="font-weight: bold;">[레스토랑]/[음료 디스펜서]</span><br><br>
-  원하는 음료를 가져가거나 랜덤 디스펜서를 이용해 보자. 랜덤 디스펜서는 1일 3회 사용 제한이 있다.<br><br>이번 주의 랜덤 디스펜서 테마는 '좋아하는 사람의 마음을 사로잡기 위한 음료'라고 한다.</p>
-  <button onclick="selectDrink('coffee')">커피</button>
-  <button onclick="selectDrink('latte')">카페라떼</button>
-  <button onclick="selectDrink('yogurt')">요거트 스무디</button>
+  원하는 음료를 가져가거나 랜덤 디스펜서를 이용해 보자. 랜덤 디스펜서는 1일 3회 사용 제한이 있다.<br><br>이번 주의 랜덤 디스펜서 테마는 '싫어하는 사람에게 주고 싶은 음료'라고 한다.</p>
+  <button onclick="selectDrink('mango')">망고 주스</button>
+  <button onclick="selectDrink('soda')">소다 플로트</button>
+  <button onclick="selectDrink('bingsu')">눈꽃 빙수</button>
   <button onclick="selectRandomDrink()">랜덤</button>
   <p id="drink-result" style="margin-top: 2em; font-weight: bold;"></p>
   <button class="nav-button" onclick="goTo('dispenser')">나가기</button>
@@ -1656,9 +1615,9 @@ function playDrinkSound() {
 // 일반 음료 선택 함수
 function selectDrink(type) {
   const messages = {
-    coffee: { title: "커피", desc: "카페에서 빠질 수 없는 메인 메뉴. 강배전으로 볶은 원두 향이 강하게 난다." },
-    "latte": { title: "카페라떼", desc: "에스프레소 샷에 최고급 우유. 고소한 맛이 매력인 카페라떼." },
-    "yogurt": { title: "요거트 스무디", desc: "카페인에 약한 사람도 안심! 상큼하고 건강한 맛의 스무디." }
+    mango: { title: "망고 주스", desc: "달콤한 맛이 매력인 망고 주스. 한 모금 머금고 바다를 바라보면 여기가 열대 바캉스!" },
+    "soda": { title: "소다 플로트", desc: "탄산음료에 바닐라 아이스크림 한 스쿱을 추가. 상큼함과 달달함을 동시에." },
+    "bingsu": { title: "눈꽃 빙수", desc: "우유 얼음을 갈아 달콤한 연유를 올렸다. 마음까지 시원해진다." }
   };
   const msg = messages[type];
   const resultBox = document.getElementById("drink-result");
@@ -1698,7 +1657,7 @@ function selectRandomDrink() {
     { title: "이산화탄소", desc: "추천인 : 리반 에케로스" },   
     { title: "푸룬주스", desc: "추천인 : 쿠루미 J. 쿠로키" },   
     { title: "교직원식당의 홍차", desc: "에르네스토 프로켈" },   
-    { title: "용암", desc: "에르네스토 프로켈" },   
+    { title: "마그마", desc: "에르네스토 프로켈" },   
     { title: "소금 99% 소금물", desc: "태이" },   
     { title: "구마용 성수", desc: "태이" },   
     { title: "민트초코 파르페", desc: "공증인" },   
