@@ -24,27 +24,11 @@ function loadFinalReport() {
   ];
 
   if (currentUser.key === 1) {
-    lines.push({ html: `<div style="color: black; font-style: italic;">손끝에 미세하게 꽃향기가 남아 있다 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
+    lines.push({ html: `<div style="color: black; font-style: italic;">[가챠 5회 무료 쿠폰]을 획득했다. 코인 대신 쓸 수 있다 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
   }
-  if (currentUser.unicycle === true) {
-    lines.push({ html: `<div style="color: black; font-style: italic;">외바퀴자전거 타는 법을 마스터했다 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
-  }
-  if (currentUser.wishticket === true) {
-    lines.push({ html: `<div style="color: black; font-style: italic;">‘소원권’ 을 획득했다. 선물할 시 상대의 호감도에 +2 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
-  }
-  if (currentUser.notalove === true) {
-    lines.push({ html: `<div style="color: black; font-style: italic;">공증인의 호의를 얻은 것 같다 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
-  }
-  if (currentUser.post) {
-  lines.push({
-    html: `<div style="color: black; font-style: italic;">${currentUser.post} 압화된 엽서를 손에 넣었다 …</div>`,
-    align: 'right',
-    lineStyle: 'color: black; font-style: italic;'
-  });
-}
   if (currentUser.gongmo && currentUser.gongmo.length > 0) {
   lines.push({
-    html: `<div style="color: black; font-style: italic;">"${currentUser.gongmo}"로 랜덤 음료 공모전에 참여했다 …</div>`,
+    html: `<div style="color: black; font-style: italic;">"${currentUser.gongmo}"라는 메시지를 미래의 자신에게 남겼다 …</div>`,
     align: 'right',
     lineStyle: 'color: black; font-style: italic;'
   });
