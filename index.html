@@ -415,7 +415,76 @@
     <button onclick="goToWithSound('memorial', 'zzapwalk_seaside.wav')">메모리얼 파크</button><br>
     <button class="nav-button" onclick="goTo('starting-point')">건물 입구로 돌아가기</button>
   </div>
+  
+    <!-- 메모리얼 파크 --> 
+    <div id="memorial" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크 입구]</span><br><br>흰 울타리로 둘러싸여 구획지어진 공간이 바다와 접하고 있다.<br>조금은 엄숙한 기분이 들지도...<br><br>
+    <span style="color: #737373;">'메모리얼 파크에 입장한다' 버튼 클릭 시 효과음이 재생됩니다.</span></p>
+    <button onclick="goToWithSoundNL('memorial1', 'zzapsea.mp3')">메모리얼 파크에 입장한다</button><br>
+    <button class="nav-button" onclick="goTo('outside')">나가기</button>
+  </div>
 
+      <!-- 메모리얼 파크:1 --> 
+    <div id="memorial1" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]</span><br><br>짧게 깎인 잔디 위로 새하얀 비석이 눈길을 끈다.<br>이곳은 세상을 떠난 초세계급을 기리는 메모리얼 파크.<br>규칙적으로 들려오는 파도 소리가 장송곡처럼 잔잔히 흐른다.<br>메모리얼 파크를 가로지르는 길은 꽃이 만발한 <span style="color: #3f40d3;">화원</span>으로 이어진다.</p>
+    <button onclick="goTo('memorial-lorem')">묘비</button>
+    <button onclick="goTo('garden')">화원</button><br>
+    <button class="nav-button" onclick="goToWithoutzzapsea('memorial')">나가기</button>
+  </div>
+
+      <!-- !!메모리얼 파크:화원 --> 
+    <div id="garden" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]<br>[화원]</span><br><br>오색의 꽃이 화려하게 피어난 화원. 장미 덤불이 시야를 가릴 정도의 높이로 다듬어져 있어 마치 미로를 연상케 한다.<br>한켠에는 <span style="color: #3f40d3;">헌화용 꽃</span>을 자유롭게 가져갈 수 있는 공간이 있다. 하나 골라 보는 것도 좋겠지...<br>화원 안쪽에는 공중전화 박스를 닮은 작은 <span style="color: #3f40d3;">부스</span>가 설치되어 있다.</p>
+    <button id="flowerpick" onclick="goTodel('gardenflower', 'flowerpick')">헌화용 꽃을 고른다</button>
+    <button onclick="goTo('fltest0')">부스</button><br>
+    <button class="nav-button" onclick="goTo('memorial1')">나가기</button>
+  </div>
+  
+      <!-- !!메모리얼 파크:부스0 --> 
+    <div id="fltest0" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]/[화원]<br>[부스]</span><br><br>부스 안쪽으로 들어가 보면, 공중전화를 닮은 전화기가 놓여 있다. 정말 공중전화 박스였던 걸까?<br>하지만 전화기는 무척 구식이고, 숫자 버튼도 눌리지 않는다.<br>전화기 아래에 작게 안내문이 쓰여 있다.<br><br><em>'미래의 자신에게 마음을 전해 보세요. 기록을 통해 1년 뒤의 당신에게 전달해 드립니다.'</em></p>
+    <button id="flt" onclick="goTodel('fltest1', 'flt')">수화기를 든다</button><br>
+    <button class="nav-button" onclick="goTo('garden')">나가기</button>
+  </div>
+
+        <!-- !!메모리얼 파크:부스1 --> 
+    <div id="fltest1" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]/[화원]<br>[부스]</span><br><br>미래의 자신에게 짧은 메시지를 남겨 보자.</p>
+     <input type="text" id="gongmo">
+  <div id="gongmobox" style="display: block; margin-top: 1em;">
+  <button onclick="addgongmo()">확인</button>
+  </div>
+    <p id="gongmo-result"></p>
+    <button class="nav-button" onclick="goTo('fltest0')">나가기</button>
+  </div>
+  
+        <!-- !!메모리얼 파크:화원:꽃 --> 
+    <div id="gardenflower" class="hidden">
+    <p><span style="font-weight: bold;">[화원]</span><br><br>마음에 드는 꽃을 고르자.</p>
+    <button onclick="goTo('flowerobtain')">아데니움</button><br>
+    <button onclick="goTo('flowerobtain')">능소화</button><br>
+    <button onclick="goTo('flowerobtain')">거베라</button><br>
+      <button onclick="goTo('flowerobtain')">라벤더</button><br>
+  </div>
+
+      <!-- !!메모리얼 파크:화원:꽃 --> 
+    <div id="flowerobtain" class="hidden">
+    <p><span style="font-weight: bold;">[화원]</span><br><br>정성을 들여 꽃을 골랐다. 이 정도면 괜찮으려나...</p>
+    <button class="nav-button" onclick="goTo('garden')">나가기</button>
+  </div>
+
+      <!-- !!메모리얼 파크:로렘의 묘비 --> 
+    <div id="memorial-lorem" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]<br>[묘비]</span><br><br>이제는 묘 여섯 개가 줄지어 있다.<br>벌써 이렇게 됐나…<br>바라보고 있으니 마음이 복잡해진다.</p>
+    <button id="flowerbtn" onclick="giveflower('flowerbtn')">헌화한다</button><br>
+    <button class="nav-button" onclick="goTo('memorial1')">나가기</button>
+  </div>
+
+      <!-- !!메모리얼 파크:로렘의 묘비:헌화 --> 
+    <div id="flowerpage" class="hidden">
+    <p><span style="font-weight: bold;">[메모리얼 파크]<br>[로렘의 묘비]</span><br><br>묘비 앞에 꽃을 가지런히 올려놓았다. 바람에 꽃잎이 살짝 흔들린다.<br>잠시 눈을 감았다 뜨니... 마음이 한결 가벼워졌다.</p>
+    <button class="nav-button" onclick="goTo('memorial1')">나가기</button>
+  </div>
     <!-- 항구 --> 
     <div id="port" class="hidden">
     <p><span style="font-weight: bold;">[항구]</span><br><br>지금은 폭파의 잔해만 남은 작은 항구. 한때는 이 섬이 바깥 세상과 연결되어 있음을 알려 주는 유일한 표식이었다.<br>소금 냄새가 선명해짐과 동시에 갈매기 우는 소리가 들려온다.<br><br>
@@ -434,7 +503,7 @@
           <!-- 항구 : 백사장 --> 
       <div id="sand" class="hidden">
     <p><span style="font-weight: bold;">[항구]<br>[백사장]</span><br><br>
-    끝없는 바다와 모래사장이 시야를 채운다.<br>너울거리는 파도가 흰 모래에 섞여 부서지고, 열기를 싣은 바람이 피부를 간질인다.<br>기분 좋은 날씨를 만끽할 수 있는 백사장.<br>육지와 가까운 곳에 <span style="color: #3f40d3;">바캉스 존</span>이 보인다... 이건 뭐지?<br>조금 떨어진 곳에 <span style="color: #3f40d3;">음료 디스펜서 V4.0</span>도 놓여 있다.<br>V4.0...?</p>
+    끝없는 바다와 모래사장이 시야를 채운다.<br>너울거리는 파도가 흰 모래에 섞여 부서지고, 열기를 싣은 바람이 피부를 간질인다.<br>육지와 가까운 곳에 <span style="color: #3f40d3;">바캉스 존</span>이 보인다... 이건 뭐지?<br>조금 떨어진 곳에 <span style="color: #3f40d3;">음료 디스펜서 V4.0</span>도 놓여 있다.<br>V4.0...?</p>
     <button onclick="goTo('zone')">바캉스 존</button>
     <button onclick="goTo('dispenser')">음료 디스펜서 V4.0</button><br>     
     <button class="nav-button" onclick="goTo('port1')">나가기</button>
@@ -2023,17 +2092,17 @@ function addgongmo() {
     currentUser.gongmo = [];
   }
   // 2번 이상 제출 시 제한
-  if (currentUser.gongmo.length >= 2) {
-    alert("이미 공모전에 음료를 제출했습니다!");
+  if (currentUser.gongmo.length >= 1) {
+    alert("이미 메시지를 보냈습니다.");
     return;
   }
   if (input === "") {
-    alert("음료 이름을 입력해 주세요.");
+    alert("메시지를 입력해 주세요.");
     return;
   }
   // 제출 처리
   currentUser.gongmo.push(input);
-  document.getElementById('gongmo-result').innerText = "공모전에 음료를 제출했습니다.";
+  document.getElementById('gongmo-result').innerText = "메시지를 작성했습니다.";
   document.getElementById('gongmo').value = "";
 }
 
