@@ -1403,21 +1403,12 @@
 누군가의 수첩. 기록되어 있는 내용은...</p>
       <button onclick="goTo('tncjq1')">첫 번째 페이지</button>
       <button onclick="goTo('tncjq2')">두 번째 페이지</button>
-      <button onclick="goTo('tncjq3')">세 번째 페이지</button>
+      <button onclick="goTo('tncjq3')">세 번째 페이지</button><br>
     <button class="nav-button" onclick="goTo('sec1')">나가기</button>
   </div>
 
              <!-- 로마에다쿤 -->  
   <div id="tncjq1" class="hidden">
-    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
-일상적, 평균적 데이터의 집합으로 기록체를 구축하려는 시도는 실패했다.<br>
-일반적인 상황에 과적합된 결과 예상 외의 사태에 유연한 아웃풋을 내놓지 못하는 것으로 보인다.<br>
-무엇보다, 자아의 형성이 이루어지지 않는다. 자아가 부재하다면 재능을 기록했다고 말할 수 없지 않은가.</p>
-    <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
-  </div>
-  
-             <!-- 로마에다쿤 -->  
-  <div id="tncjq2" class="hidden">
     <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
 일상적, 평균적 데이터의 집합으로 기록체를 구축하려는 시도는 실패했다.<br>
 일반적인 상황에 과적합된 결과 예상 외의 사태에 유연한 아웃풋을 내놓지 못하는 것으로 보인다.<br>
@@ -1443,7 +1434,7 @@
 부지 전체에 강결합 데이터 시스템을 설치했다.<br>
 파훼할 수 없도록 여러 장치를 마련해 두었다.<br>
 성공한다면, 다음에 눈을 뜰 때에는 이 섬의 공증인으로서인가.<br>
-스스로의 유언을 집행한다...<br>기록과 희망을 위해서.</p>
+스스로의 유언을 집행한다. 기록과 희망을 위해서.</p>
     <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
   </div>
   
@@ -1451,13 +1442,48 @@
   <!-- 로렘 1-->  
   <div id="lore01" class="hidden">
     <p><span style="font-weight: bold;">[건물 입구]</span><br><br>흰 관을 연상시키는 건물. 그 입구에 다다른다.<br>돌로 된 정문 표면에는 당신이 기록한 문자가 빼곡히 음각으로 새겨져 있다.<br>이 섬은 당신의 유언이다.</p>
-    <button onclick="goToWithBGM('sec', 'sec.mp3')">연구실로 향한다</button><br>    
+    <button onclick="goToWithBGM('lore02', 'sec.mp3')">연구실로 향한다</button><br>    
   </div>
 
       <!-- 로렘 1-->  
   <div id="lore02" class="hidden">
-    <p><span style="font-weight: bold;">[건물 입구]</span><br><br>흰 관을 연상시키는 건물. 그 입구에 다다른다.<br>돌로 된 정문 표면에는 당신이 기록한 문자가 빼곡히 음각으로 새겨져 있다.<br>이 섬은 당신의 유언이다.</p>
-    <button onclick="goTo('lore2')">연구실로 향한다</button>
+    <p><span style="font-weight: bold;">[연구실]</span><br><br>당신은 그동안 시간을 쏟아부었던 연구실을 둘러본다.<br>이제 모든 준비를 마쳤다.</p>
+    <button onclick="goTo('lore03')">아치형 문으로 들어간다</button>
+  </div>
+
+        <!-- 로렘 1-->  
+  <div id="lore03" class="hidden">
+    <p><span style="font-weight: bold;">[데이터 관제실]</span><br><br>당신은 육신을 필요로 하지 않는 시스템을 구축했다.<br>지금은 이론뿐이지만, 한 치의 오차도 없이 작동하리라는 확신이 가슴을 채운다.</p>
+    <button onclick="goTo('lore04')">철제 문을 연다</button>
+  </div>
+
+          <!-- 로렘 1-->  
+  <div id="lore04" class="hidden">
+    <p><span style="font-weight: bold;">[철제 문 안쪽의 방]</span><br><br>당신은 철제 문을 열고, 그 안으로 들어간다.<br>기록체 생성의 조건인 극단적 상황을 구현하기 위해서는 스스로가 죽음을 맞이하는 방법을 알아서는 안 된다.</p>
+    <button onclick="goTo('lore05')">방 안에서 기다린다</button>
+  </div>
+
+            <!-- 로렘 1-->  
+  <div id="lore05" class="hidden">
+    <p><span style="font-weight: bold;">[철제 문 안쪽의 방]</span><br><br>당신은 죽음이 두렵다.<br>그러나 죽음을 피하지는 않을 것이다.<br>죽음은 기록을 완성하기 위한 수단일 뿐이다.</p>
+    <button onclick="goTo('lore06')">기다린다</button>
+  </div>
+
+              <!-- 로렘 1-->  
+  <div id="lore06" class="hidden">
+    <p><span style="font-weight: bold;">[철제 문 안쪽의 방]</span><br><br>당신이 강제할 살인과 그 안에서 태어날 수많은 감정 또한, 그들을 영원히 기록하는 과정의 일부가 되리라.</p>
+    <button onclick="goTo('lore07')">기다린다</button>
+  </div>
+
+                <!-- 로렘 1-->  
+  <div id="lore07" class="hidden">
+    <p><span style="font-weight: bold;">[철제 문 안쪽의 방]</span><br><br>당신은 다음과 같이 유언한다... ...</p>
+    <button onclick="goTo('lore08')">기다린다</button>
+  </div>
+
+                  <!-- 로렘 1-->  
+  <div id="lore08" class="hidden">
+    <p><span style="font-weight: bold;">[철제 문 안쪽의 방]</span><br><br>... ...</p>
   </div>
   
 <!-- !!!!여기서부터 스크립트!!!! -->
