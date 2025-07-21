@@ -629,21 +629,58 @@
 
     <!-- 음악실 --> 
     <div id="music" class="hidden">
-    <p><span style="font-weight: bold;">[음악실]</span><br><br>다양한 악기와 음반을 모아 둔 음악실. 전과 달라진 점은 없는 것 같다. 쓰러져 있었던 딥 블루의 CD가 다시 말끔히 세워져 있다.</p>
+    <p><span style="font-weight: bold;">[음악실]</span><br><br>다양한 악기와 음반을 모아 둔 음악실.<span style="color: #3f40d3;">악기 보관실</span>이라고 쓰인 작은 문이 구석에 배치된 것이 보인다.</p>
+       <button onclick="goTo('inst')">악기 보관실</button><br>
     <button class="nav-button" onclick="goTo('3rdfloor')">나가기</button>
+  </div>
+
+      <!-- 악기 보관실 --> 
+    <div id="inst" class="hidden">
+    <p><span style="font-weight: bold;">[음악실]/[악기 보관실]</span><br><br>다양한 악기가 보관된 곳.<br>
+그랜드 피아노에는 건반 덮개가 놓여 있지만, 사실 그보다 연주해 보고 싶은 악기가 따로 있을지도 모른다.<br>어떤 악기든 빌릴 수 있을 때 도전해 보면 어떨까.</p>
+      <button id="ppbtn" onclick="getpopcorn('ppbtn')">악기를 골라 연주해 본다</button><br>
+    <button class="nav-button" onclick="goTo('music')">나가기</button>
+  </div>
+
+        <!-- 악기 보관실 --> 
+    <div id="inst1" class="hidden">
+    <p><span style="font-weight: bold;">[음악실]/[악기 보관실]</span><br><br>
+처음 다뤄 보는 악기에서 형편없는 소리가 흘러나온다.<br>하지만 연습을 반복하니 듣기 싫은 소리도 점점 깨끗해지며 음악의 구색을 갖춰 나간다.<br>앞으로도 종종 다뤄볼까?<br><br>악기를 정리하려 하자 원래 있던 자리에 코인 1개가 놓여 있었다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
+    <button class="nav-button" onclick="goTo('music')">나가기</button>
+  </div>
+
+        <!-- 악기 보관실 --> 
+    <div id="inst2" class="hidden">
+    <p><span style="font-weight: bold;">[음악실]/[악기 보관실]</span><br><br>
+그럭저럭 들을 만한 소리가 흘러 나온다.<br>조금 더 갈고닦으면 괜찮은 취미로 남들 앞에서 소개할 수 있을지도 모른다.<br>앞으로도 종종 다뤄 볼까?<br>악기를 정리하려 하자 원래 있던 자리에 코인 1개가 놓여 있었다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
+    <button class="nav-button" onclick="goTo('music')">나가기</button>
+  </div>
+
+          <!-- 악기 보관실 --> 
+    <div id="inst3" class="hidden">
+    <p><span style="font-weight: bold;">[음악실]/[악기 보관실]</span><br><br>
+처음 다뤄 보는 것이라고는 믿을 수 없는 매끄러운 음색이 흘러나온다.<br>새로운 재능을 터득한 걸지도. 앞으로도 종종 다뤄 볼까?<br><br>악기를 정리하려 하자 원래 있던 자리에 코인 1개가 놓여 있었다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
+    <button class="nav-button" onclick="goTo('music')">나가기</button>
   </div>
 
     <!-- 영화관 --> 
     <div id="cinema" class="hidden">
-    <p><span style="font-weight: bold;">[영화관]</span><br><br>소규모지만, 제법 영화관 분위기가 나는 장소. 전과 크게 달라진 점은 없지만,<br><span style="color: #3f40d3;">"음료 디스펜서는 4층의 카페로 이전했습니다"</span> 라는 안내문이 붙어 있다.</p>
+    <p><span style="font-weight: bold;">[영화관]</span><br><br>소규모지만, 제법 영화관 분위기가 나는 장소.<br>자리에 앉으면 주변이 어두워지고 스크린에 불이 들어온다.<br>모두가 최선을 다하고, 노력이 보답받고.<br>그런 이야기는 영화 속에나 존재하며, 현실로 훔쳐 올 수는 없는 것인지도 모른다.</p>
     <button class="nav-button" onclick="goTo('3rdfloor')">나가기</button>
     </div>   
   
     <!-- 미술실 --> 
     <div id="art" class="hidden">
-    <p><span style="font-weight: bold;">[미술실]</span><br><br>예술적 소양을 함양할 수 있는 공간. 이곳저곳 이젤과 화구가 놓여 있다.<br>그동안 초세계급들이 그린 그림들이 초세계급 화가의 그림 옆에 나란히 전시되어 있다.</p>
+    <p><span style="font-weight: bold;">[미술실]</span><br><br>예술적 소양을 함양할 수 있는 공간. 이곳저곳 이젤과 화구가 놓여 있다.<br>크게 작업실과 <span style="color: #3f40d3;">전시실</span>로 나누어져 있는 듯하다.</p>
+    <button onclick="goTo('museum')">전시실</button><br>  
     <button class="nav-button" onclick="goTo('3rdfloor')">나가기</button>
-    </div>   
+    </div>  
+
+  <!-- 전시실 --> 
+<div id="museum" class="hidden">
+<p><span style="font-weight: bold;">[미술실]/[전시실]</span><br><br>다양한 유명 작품들을 모아서 전시해 둔 곳이다.<br>「천사」 연작 옆에 초세계급들이 그린 그림이 나란히 걸려 있다.<br>화가의 그림에 비하면 서툴기 짝이 없지만, 덕분에 가운데 걸린 천사 그림이 외롭지 않아 보인다. </p>
+<button class="nav-button" onclick="goTo('art')">나가기</button>
+</div>
   
     <!-- 공연장 --> 
     <div id="stage" class="hidden">
@@ -1809,14 +1846,14 @@ function checkSecretCode() {
   }
 }    
 
-//★★★★팝콘뽑기->벤치프레스로개조함★★★★
+//★★★★팝콘뽑기->악기연주로개조함★★★★
 function getpopcorn(buttonId) {
-  if (currentUser.STR <= 2) {
-    goTo('bench1');
-  } else if (currentUser.STR >= 4) {
-    goTo('bench2');
+  if (currentUser.LUC <= 2) {
+    goTo('inst1');
+  } else if (currentUser.LUC >= 4) {
+    goTo('inst2');
   } else {
-    goTo('bench3');
+    goTo('inst3');
   }
     const btn = document.getElementById(buttonId);
     if (btn) btn.remove()  // 단 한 번만 제거
