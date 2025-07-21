@@ -408,6 +408,38 @@
   <button class="nav-button" onclick="goTo('table')">나가기</button>
   </div>
 
+      <!-- 바깥 1층 --> 
+    <div id="outside" class="hidden">
+    <p><span style="font-weight: bold;">[건물 바깥]</span><br><br>소금기 섞인 바람이 저편에서부터 불어온다. 평화롭다는 착각을 하게 될 정도로 좋은 날씨...<br>건물에서 나가는 길을 쭉 따라가면 <span style="color: #3f40d3;">항구</span>로 이어진다.<br>항구에서 조금 떨어진 곳에 <span style="color: #3f40d3;">메모리얼 파크</span>가 위치해 있다.</p>
+    <button onclick="goToWithSound('port', 'zzapwalk_seaside.wav')">항구</button>
+    <button onclick="goToWithSound('memorial', 'zzapwalk_seaside.wav')">메모리얼 파크</button><br>
+    <button class="nav-button" onclick="goTo('starting-point')">건물 입구로 돌아가기</button>
+  </div>
+
+    <!-- 항구 --> 
+    <div id="port" class="hidden">
+    <p><span style="font-weight: bold;">[항구]</span><br><br>지금은 폭파의 잔해만 남은 작은 항구. 한때는 이 섬이 바깥 세상과 연결되어 있음을 알려 주는 유일한 표식이었다.<br>소금 냄새가 선명해짐과 동시에 갈매기 우는 소리가 들려온다.<br><br>
+    <span style="color: #737373;">'항구 안쪽으로 들어간다' 버튼 클릭 시 효과음이 재생됩니다.</span></p>
+    <button onclick="goToWithSoundNL('port1', 'zzapport.mp3')">항구 안쪽으로 들어간다</button><br>    
+    <button class="nav-button" onclick="goTo('outside')">나가기</button>
+  </div>
+
+      <!-- 항구 : 1 --> 
+      <div id="port1" class="hidden">
+    <p><span style="font-weight: bold;">[항구]</span><br><br>이곳으로 올 때 탔던 배는 이미 형체도 보이지 않지만...<br>그 옆으로 이어지는 <span style="color: #3f40d3;">백사장</span>에서는 제법 휴양지 분위기가 풍긴다.</p>
+    <button onclick="goTo('sand')">백사장</button><br>
+    <button class="nav-button" onclick="goToWithoutzzapsea('port')">나가기</button>
+  </div>
+
+          <!-- 항구 : 백사장 --> 
+      <div id="sand" class="hidden">
+    <p><span style="font-weight: bold;">[항구]<br>[백사장]</span><br><br>
+    끝없는 바다와 모래사장이 시야를 채운다.<br>너울거리는 파도가 흰 모래에 섞여 부서지고, 열기를 싣은 바람이 피부를 간질인다.<br>기분 좋은 날씨를 만끽할 수 있는 백사장.<br>육지와 가까운 곳에 <span style="color: #3f40d3;">망원경</span>이 몇 개 설치되어 있다.</p>
+    <button id="mangwongyeong" onclick="goTodel('sand1', 'mangwongyeong')">망원경을 사용한다</button><br>
+    <button class="nav-button" onclick="goTo('port1')">나가기</button>
+  </div>
+
+
   
   <!-- 백사장 : 음료 디스펜서 --> 
   <div id="dispenser" class="hidden">
