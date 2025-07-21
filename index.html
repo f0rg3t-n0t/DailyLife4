@@ -1274,7 +1274,7 @@
   <!-- 도슨 씨가 찾아낸 공간 -->  
   <div id="dawson" class="hidden">
     <p><span style="font-weight: bold;">[정체불명의 공간]</span><br><br>이사도르가 찾아낸, 정체를 알 수 없는 공간.<br>이곳에 우리가 한 번도 직면한 적이 없는 진실이 있다고 했었지...</p>
-    <button onclick="goToWithBGM('sec1', 'sec.mp3')">들어간다</button><br>
+    <button onclick="goToWithBGM('sec', 'sec.mp3')">들어간다</button><br>
     <button class="nav-button" onclick="goToWithBGM('starting-point', 'zzapbgm.mp3')">건물 입구로 돌아가기</button>
   </div>
 
@@ -1362,12 +1362,89 @@
 
           <!-- 로마에다쿤 -->  
   <div id="die1" class="hidden">
-    <p><span style="font-weight: bold;">[연구실]/[철제 문]</span><br><br>
+    <p><span style="font-weight: bold;">[연구실]/[철제 문으로 닫힌 방]</span><br><br>
 문을 열고 들어가면 비릿한 냄새가 확 끼쳐 구역질이 난다.<br>눈에 띄는 가구나 설비 없이 대체로 비어 있는 방이지만, 철로 된 바닥이 검붉게 변색된 것이 눈에 띈다.<br>붉은 자국은 아래에서부터 뿌려진 듯한 형태로 벽에도 묻어 있다.<br>천장을 올려다보면 뾰족한 무언가가 눈에 들어온다.</p>
-       <button onclick="goTo('diefloor')">바닥</button><br>  
+       <button onclick="goTo('diefloor')">바닥</button>
        <button onclick="goTo('diewall')">벽</button>
-      <button onclick="goTo('dieup')">천장</button>
+      <button onclick="goTo('dieup')">천장</button><br>
     <button class="nav-button" onclick="goTo('diedoor')">나가기</button>
+  </div>
+
+          <!-- 로마에다쿤 -->  
+  <div id="diefloor" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[철제 문으로 닫힌 방]</span><br><br>
+바닥을 밟을 때마다 검붉은 자국이 신발 바닥에 달라붙는다.<br>바닥 어디에도 환풍구나 배수구 같은 것은 보이지 않는다.<br>뾰족한 주사기 같은 것이 바닥 한켠에 굴러다니는데... 함부로 만지면 위험할 것 같다.</p>
+    <button class="nav-button" onclick="goTo('die1')">나가기</button>
+  </div>
+            <!-- 로마에다쿤 -->  
+  <div id="diewall" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[철제 문으로 닫힌 방]</span><br><br>
+차단기처럼 보이는 레버가 부착되어 있다.</p>
+    <button class="nav-button" onclick="goTo('die1')">나가기</button>
+  </div>
+            <!-- 로마에다쿤 -->  
+  <div id="dieup" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[철제 문으로 닫힌 방]</span><br><br>
+천장에 부착된 것은 날카로운 칼날이다. 칼날 끝에 혈흔이 부착되어 굳어진 것이 보인다.</p>
+    <button class="nav-button" onclick="goTo('die1')">나가기</button>
+  </div>
+
+         <!-- 로마에다쿤 -->  
+  <div id="secdoor" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+아치형 문을 넘어 나아가면, 그곳에 있는 것은 복잡하게 얽힌 회로, 수많은 전선들...<br>웅웅 소리를 내며 가동되고 있는 기계들이다.<br>함부로 건드려서는 안 될 것 같다.<br>...<br>중앙에 있는 컴퓨터 근처에 작은 수첩이 떨어져 있다.</p>
+       <button onclick="goTo('tncjq')">수첩</button>
+    <button class="nav-button" onclick="goTo('sec1')">나가기</button>
+  </div>
+
+           <!-- 로마에다쿤 -->  
+  <div id="tncjq" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+누군가의 수첩. 기록되어 있는 내용은...</p>
+      <button onclick="goTo('tncjq1')">첫 번째 페이지</button>
+      <button onclick="goTo('tncjq2')">두 번째 페이지</button>
+      <button onclick="goTo('tncjq3')">세 번째 페이지</button>
+    <button class="nav-button" onclick="goTo('sec1')">나가기</button>
+  </div>
+
+             <!-- 로마에다쿤 -->  
+  <div id="tncjq1" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+일상적, 평균적 데이터의 집합으로 기록체를 구축하려는 시도는 실패했다.<br>
+일반적인 상황에 과적합된 결과 예상 외의 사태에 유연한 아웃풋을 내놓지 못하는 것으로 보인다.<br>
+무엇보다, 자아의 형성이 이루어지지 않는다. 자아가 부재하다면 재능을 기록했다고 말할 수 없지 않은가.</p>
+    <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
+  </div>
+  
+             <!-- 로마에다쿤 -->  
+  <div id="tncjq2" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+일상적, 평균적 데이터의 집합으로 기록체를 구축하려는 시도는 실패했다.<br>
+일반적인 상황에 과적합된 결과 예상 외의 사태에 유연한 아웃풋을 내놓지 못하는 것으로 보인다.<br>
+무엇보다, 자아의 형성이 이루어지지 않는다. 자아가 부재하다면 재능을 기록했다고 말할 수 없지 않은가.</p>
+    <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
+  </div>
+
+             <!-- 로마에다쿤 -->  
+  <div id="tncjq2" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+극단적 상황에서의 반응까지도 데이터로 기록한다.<br>
+다시 말해, 기록 대상을 극단적 상황에 처하게 만듦으로써 데이터를 얻어낸다.<br>
+단순히 예상 외의 사건을 겪게 하는 것으로는 불충분하다.<br>
+... ...<br>
+죽음, 또는 타인의 살해를 강제?<br><br>
+가능할 것인가?</p>
+    <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
+  </div>
+
+             <!-- 로마에다쿤 -->  
+  <div id="tncjq3" class="hidden">
+    <p><span style="font-weight: bold;">[연구실]/[데이터 관제실]</span><br><br>
+부지 전체에 강결합 데이터 시스템을 설치했다.<br>
+파훼할 수 없도록 여러 장치를 마련해 두었다.<br>
+성공한다면, 다음에 눈을 뜰 때에는 이 섬의 공증인으로서인가.<br>
+스스로의 유언을 집행한다...<br>기록과 희망을 위해서.</p>
+    <button class="nav-button" onclick="goTo('tncjq')">나가기</button>
   </div>
   
 <!-- 로렘 이스터에그 -->    
