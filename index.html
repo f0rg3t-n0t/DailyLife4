@@ -1431,13 +1431,11 @@
       setTimeout(() => {
         container.remove();
         showUserInfo();
-            // ✅ 특정 아이디면 lore01으로 보냄
-    if (currentUser.id === "LoremIpsum") {
-      goTo("lore01");
-    } else {
-      goTo("main-page"); // 기본 진입 페이지
+        document.getElementById('main-page').classList.remove('hidden');
+        pageHistory.push('main-page');
+      }, 3600);
     }
-    }
+    
 //★★★★★유저 인포메이션 창★★★★★
     function showUserInfo() {
       const userBox = document.getElementById('user-display');
