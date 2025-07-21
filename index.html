@@ -312,6 +312,8 @@
   <div id="starting-point" class="hidden">
     <p><span style="font-weight: bold;">[건물 입구]</span><br><br>흰 관을 연상시키는 건물. 그 입구에 다다른다.<br>돌로 된 정문 표면에는 알 수 없는 문자가 빼곡히 음각으로 새겨져 있다.<br>건물 바깥은 이미 충분히 돌아보았으니 오늘은 새로 공개된 장소 위주로 탐색해 보자.</p>
     <button onclick="goTo('inside')">건물 안으로 들어간다</button>
+    <button onclick="goTo('outside')">건물 밖으로 나간다</button>
+    <button onclick="goTo('dawson')">어쩌고... 공간으로</button>
   </div>
 
   <!-- 내부 1층 --> 
@@ -1038,6 +1040,20 @@
 따뜻한 물이 나오는 스파. 온도별로 다양한 탕이 있고, 수압 조절로 근육 이완을 돕는 안마탕도 있다.<br>따뜻한 물에 몸을 담그니 날카로워진 마음도 누그러지는 것 같다.</p>
     <button class="nav-button" onclick="goTo('spa1')">나가기</button>
  </div> 
+
+  <!-- 도슨 씨가 찾아낸 공간 -->  
+  <div id="dawson" class="hidden">
+    <p><span style="font-weight: bold;">[정체불명의 공간]</span><br><br>땅을 파서 들어가나... 아니면 엘베를 비밀코드에맞춰서누르나...</p>
+    <button onclick="goTo('sec')">안으로 들어간다</button>
+  </div>
+
+  <!-- 도슨 씨가 찾아낸 공간 -->  
+  <div id="sec" class="hidden">
+    <p><span style="font-weight: bold;">[정체불명의 연구실]</span><br><br>땅을 파서 들어가나... 아니면 엘베를 비밀코드에맞춰서누르나...</p>
+    <button onclick="goTo('sec')">안으로 들어간다</button>
+  </div>
+
+  
   
 <!-- !!!!여기서부터 스크립트!!!! -->
   <script>
