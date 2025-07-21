@@ -334,10 +334,11 @@
       <button onclick="goToWithSound('inside','zzapelevator.mp3')">1층</button><br>
  </div>     
   
-    <!-- 로비 --> 
+   <!-- 로비 --> 
     <div id="lobby" class="hidden">
-    <p><span style="font-weight: bold;">[로비]</span><br><br>건물에 들어오면 가장 먼저 보게 되는 곳.<br>우아한 석조 <span style="color: #3f40d3;">카운터</span>를 중심으로 내빈을 위한 라운지가 마련되어 있다.</p>
-    <button onclick="goTo('counter')">카운터</button><br>
+    <p><span style="font-weight: bold;">[로비]</span><br><br>건물에 들어오면 가장 먼저 보게 되는 곳.<br>우아한 석조 <span style="color: #3f40d3;">카운터</span>를 중심으로 내빈을 위한 <span style="color: #3f40d3;">라운지</span>가 마련되어 있다.</p>
+    <button onclick="goTo('counter')">카운터</button>
+    <button onclick="goTo('waitingspace')">라운지</button><br>
     <button class="nav-button" onclick="goTo('inside')">나가기</button>
   </div>
 
@@ -347,6 +348,54 @@
     <button class="nav-button" onclick="goTo('lobby')">나가기</button>
  </div>
 
+     <!-- 로비:라운지 --> 
+    <div id="waitingspace" class="hidden">
+    <p><span style="font-weight: bold;">[로비]<br>[라운지]</span><br><br>카운터 앞쪽에 배치된 라운지. <span style="color: #3f40d3;">소파</span>에 앉아 잠시 쉬어가거나 담소를 나누기에 좋은 곳이다.<br>라운지 양쪽으로는 큰 유리창이 나 있어 섬의 풍경이 한눈에 들어온다.<br>잔잔한 파도가 치는 바닷가, 그 위를 평화롭게 날아다니는 바닷새들…<br>라운지 중앙에는 무료함을 달래기 위해서인지 작은 <span style="color: #3f40d3;">책꽂이</span>가 설치되어 있다. </p>
+    <button onclick="goTo('sofa')">소파</button>
+    <button onclick="goTo('bookshelf')">책꽂이</button><br>
+    <button class="nav-button" onclick="goTo('lobby')">나가기</button>
+ </div>
+
+    <!-- 로비:라운지:소파 --> 
+    <div id="sofa" class="hidden">
+    <p><span style="font-weight: bold;">[로비]/[라운지]<br>[소파]</span><br><br>
+    멋들어진 흰색 소파가 여러 개 놓여 있다. 누군가를 기다릴 때 앉아 있기 딱일 것 같다. 잠깐 앉아서 휴식을 취해 볼까?</p>
+    <button id="sit" onclick="goTodel('sofa1', 'sit')">앉는다</button><br>
+    <button class="nav-button" onclick="goTo('waitingspace')">나가기</button>
+ </div>
+  
+      <!-- 로비:라운지:소파에 앉기 --> 
+    <div id="sofa1" class="hidden">
+    <p><span style="font-weight: bold;">[로비]/[라운지]<br>[소파]</span><br><br>
+    소파를 감싸고 있는 천의 촉감은 무척 부드럽고, 등을 받치는 쿠션은 딱 좋을 정도로 푹신하다.<br>창문 너머로 들어오는 햇빛을 받으며 계속 앉아 있으니 어쩐지 졸음이 쏟아진다...</p>
+    <button onclick="goTo('sofa1-1')">잠깐 눈을 붙인다</button><br>
+ </div>
+    <!-- 로비:라운지:소파 1-1 --> 
+    <div id="sofa1-1" class="hidden">
+    <p><span style="font-weight: bold;">[로비]/[라운지]<br>[소파]</span><br><br>
+어차피 자유시간이겠다, 잠깐 휴식을 취해서 안 될 것도 없겠지...<br>잠시 눈을 감기로 한다.
+<br><br>
+... ...<br><br>
+얼마나 시간이 지난 거지? 어쩐지 흰 새가 나오는 꿈을 꾼 것 같다.<br>손을 뻗어도 결국 새를 잡지는 못했지만, 무척 기분 좋은 수면이었다.</p>
+    <button class="nav-button" onclick="goTo('waitingspace')">나가기</button>
+ </div>
+  <!-- 로비:라운지:책꽂이 --> 
+    <div id="bookshelf" class="hidden">
+    <p><span style="font-weight: bold;">[로비]/[라운지]<br>[책꽂이]</span><br><br>
+    책의 종류는 많지 않다. 미래기관이나 초세계급에 대한 책자가 대부분이다.<br>살짝 살펴볼까?</p>
+    <button onclick="goToWithSound('book2','zzapbook.mp3')">《궁금해요! 초세계급 A to Z》</button><br>
+    <button class="nav-button" onclick="goTo('waitingspace')">나가기</button>
+ </div>
+
+      <!-- 로비:라운지:책2 --> 
+    <div id="book2" class="hidden">
+    <p><span style="font-weight: bold;">[로비]/[라운지]<br>[책꽂이]</span><br><br>
+푸른색 표지의 책.<br><br>초세계급으로 선발된 인원들에 대한 소개를 담고 있다.<br><br><br>가장 눈에 띄는 것은 역시나 로렘에 대한 정보를 담은 파트지만, 그에 지지 않을 정도로 다종다양한 활약이나 도전 이력이 실린 부분도 있다.<br>이만하면 로렘에게도 지지 않을 것 같다.</p>
+    <button class="nav-button" onclick="goTo('bookshelf')">나가기</button>
+ </div>
+
+
+  
       <!-- 레스토랑 --> 
     <div id="restaurant" class="hidden">
     <p><span style="font-weight: bold;">[레스토랑]</span><br><br>이곳에 모인 초세계급들의 식사를 책임지는 레스토랑. 식사를 하며 바깥 풍경을 바라볼 수 있도록 유리창이 나 있다.
@@ -358,61 +407,16 @@
     <!-- 레스토랑 : 테이블 --> 
   <div id="table" class="hidden">
   <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-  1일 3회, 식사 시간마다 각종 음식이 차려지곤 하는 테이블. 다양한 문화와 취향, 영양소까지 고루 고려한 식사가 나온다.<br>
-  지금은 식사 대신... 자본을 이용해 상대를 파산시켜야 하는 보드게임 판이 펼쳐져 있다?!<br>상대는 로봇 팔인 모양이지만...</p>
- <button id="monopl" onclick="goTodel('monopoly', 'monopl')">게임에 도전한다</button><br>
+깨끗한 식탁보로 덮인 테이블.<br>언뜻 보면 새하얗게만 보이지만... 자리에 앉아 자세히 들여다 보면 간식 바구니 밑에 희미한 자국이 남아 있다.<br>누구에나 이런 흠집 하나쯤은 있는 거겠지. </p>
   <button class="nav-button" onclick="goTo('table')">나가기</button>
   </div>
 
-    <!-- 모노폴리 --> 
-  <div id="monopoly" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-이런 게임에 도전할 때 가장 중요한 것은 뭐니뭐니해도 전략.<br>어떤 전략을 선택하지?</p>
-  <button onclick="goTo('monopoly1')">담대한 베팅으로 한 판 승부를 노린다</button>   
-  <button onclick="goTo('monopoly2')">상대의 수를 읽으며 신중하게 선택한다</button>   
-  <button onclick="goTo('monopoly3')">모든 것을 운에 맡긴다</button>   
-  </div>
-
-      <!-- 모노폴리:정신 --> 
-  <div id="monopoly1" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-담대하게 베팅하기로 했다. 결과는...?</p>
-<button id="mp1btn" onclick="mnplPOW('mp1btn')">끝까지 플레이한다</button>
-  </div>
-  
-      <!-- 모노폴리:정신 --> 
-  <div id="monopoly2" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-신중하게 베팅하기로 했다. 결과는...?</p>
-<button id="mp2btn" onclick="mnplINT('mp2btn')">끝까지 플레이한다</button>
-  </div>
-
-        <!-- 모노폴리:정신 --> 
-  <div id="monopoly3" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-전부 운에 맡기기로 했다. 결과는...?</p>
-<button id="mp3btn" onclick="mnplLUC('mp3btn')">끝까지 플레이한다</button>
-  </div>
-
-      <!-- 모노폴리:승 --> 
-  <div id="monopolywin" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-로봇과의 승부에서 완전한 승리를 거뒀다!<br>로봇 손이 잠시 테이블 아래로 사라지더니... 코인 2개와 함께 돌아온다.<br><br><span style="font-weight: bold;">2코인을 획득했다.</span></p>
-  <button class="nav-button" onclick="goTo('table')">나가기</button>
-  </div>
-
-        <!-- 모노폴리:패 --> 
-  <div id="monopolylose" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
-최선을 다했지만... 참패하고 말았다. 이 전략이 잘 맞지 않았던 건가...?!<br>그래도 참가상인지, 로봇 손이 코인 1개를 손에 쥐여 준다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
-  <button class="nav-button" onclick="goTo('table')">나가기</button>
-  </div>
-
-      <!-- 바깥 1층 --> 
+    <!-- 바깥 1층 --> 
     <div id="outside" class="hidden">
-    <p><span style="font-weight: bold;">[건물 바깥]</span><br><br>소금기 섞인 바람이 저편에서부터 불어온다. 평화롭다는 착각을 하게 될 정도로 좋은 날씨...<br>건물에서 나가는 길을 쭉 따라가면 <span style="color: #3f40d3;">항구</span>로 이어진다.<br>항구에서 조금 떨어진 곳에 <span style="color: #3f40d3;">메모리얼 파크</span>가 위치해 있다.</p>
+    <p><span style="font-weight: bold;">[건물 바깥]</span><br><br>소금기 섞인 바람이 저편에서부터 불어온다. 바깥은 더할 나위 없이 평화롭다.<br>건물에서 나가는 길을 쭉 따라가면 <span style="color: #3f40d3;">항구</span>로 이어진다.<br>항구에서 조금 떨어진 곳에 <span style="color: #3f40d3;">메모리얼 파크</span>가 위치해 있고, 묘지에서 섬 뒤편으로 이어지는 <span style="color: #3f40d3;">산책로</span>가 희미하게 보인다.</p>
     <button onclick="goToWithSound('port', 'zzapwalk_seaside.wav')">항구</button>
-    <button onclick="goToWithSound('memorial', 'zzapwalk_seaside.wav')">메모리얼 파크</button><br>
+    <button onclick="goToWithSound('memorial', 'zzapwalk_seaside.wav')">메모리얼 파크</button>
+    <button onclick="goToWithSound('street', 'zzapwalk_seaside.wav')">산책로</button><br>
     <button class="nav-button" onclick="goTo('starting-point')">건물 입구로 돌아가기</button>
   </div>
   
@@ -608,12 +612,60 @@
 튜브와 구명조끼 등이 배치되어 있어 바다에서 수영하는 것도 가능할 것 같다.<br>문득 바다를 바라보면, 분홍색 돌고래 튜브가 해안가에서 둥둥 떠다니고 있다.<br>올라타면 거친 파도도 막아줄 것만 같은 든든함이 느껴진다.<br><br>분홍 돌고래와 함께 바다 수영을 만끽했다!</p>
   <button class="nav-button" onclick="goTo('zone')">나가기</button>
   </div>
-  
-    <!-- 2층 --> 
+
+      <!-- 산책로 --> 
+    <div id="street" class="hidden">
+    <p><span style="font-weight: bold;">[산책로]</span><br><br>섬 뒤쪽을 돌아볼 수 있는 해안산책로. 왕복 30분 정도 소요된다는 안내가 적혀 있다.<br><span style="color: #3f40d3;">소원의 호수</span>로 가거나 <span style="color: #3f40d3;">작은 벤치</span>에 앉을 수 있다.</p>
+    <button onclick="goTo('street1')">소원의 호수</button><br>
+    <button onclick="goTo('bench')">작은 벤치</button><br>
+    <button class="nav-button" onclick="goTo('outside')">나가기</button>
+  </div>
+        <!-- 산책로-작은 벤치 --> 
+    <div id="bench" class="hidden">
+    <p><span style="font-weight: bold;">[산책로]<br>[작은 벤치]</span><br><br>바다를 향하는 쪽으로 놓인 벤치. 앉아서 쉬기에 딱 좋은 장소다.<br>아무것도 없던 자리에 표지판이 새로 생겼다. <br>「후방 주의」</p>
+    <button class="nav-button" onclick="goTo('street')">나가기</button>
+  </div>
+
+  <!-- 소원 빌기 --> 
+  <div id="pond" class="hidden"> 
+  <p><span style="font-weight: bold;">[산책로]<br>[소원의 호수]</span><br><br>소원의 호수에 도착했다. 어떤 소원을 빌까?</p>
+  <button onclick="goTo('pond-money')">여기서 나가고 싶다</button><br>
+  <button onclick="goTo('pond-friend')">친구를 많이 사귀고 싶다</button><br>
+      <button class="nav-button" onclick="goTo('street')">나가기</button>
+  </div>
+
+  <!-- 소원 빌기 --> 
+  <div id="pond-money" class="hidden"> 
+  <p><span style="font-weight: bold;">[산책로]<br>[소원의 호수]</span><br><br>"여기서 나가고 싶다!"<br>소원을 빌었다...<br><br>... ...<br><br>아무 일도 일어나지 않았다.</p>
+  <button class="nav-button" onclick="goTo('pond')">나가기</button>
+  </div>
+
+  <div id="pond-friend" class="hidden"> 
+  <p><span style="font-weight: bold;">[산책로]<br>[소원의 호수]</span><br><br>"친구를 많이 사귀고 싶다!"<br>소원을 빌었다...<br><br>어라? 아무것도 없던 하늘에서 갑자기 절친이 한 명 떨어지... 지는 않았지만.<br>
+그래도 어쩐지 자신감이 생겼다. 우선은 모두에게 인사부터 해 볼까?</span></p>
+  <button class="nav-button" onclick="goTo('pond')">나가기</button>
+  </div>
+
+
+   <!-- 2층 --> 
     <div id="2ndfloor" class="hidden">
-    <p><span style="font-weight: bold;">[2층]</span><br><br>왼쪽 복도는 내빈용 객실로, 오른쪽 복도는 회의실로 이어진다.<br>2층은 이미 둘러보았으니 다른 층을 확인하자.</p>
-    <button onclick="goTo('elevator')">엘리베이터</button><br>
+    <p><span style="font-weight: bold;">[2층]</span><br><br>왼쪽 복도는 내빈용 객실로, 오른쪽 복도는 <span style="color: #3f40d3;">회의실</span>로 이어진다.</p>
+    <button onclick="goTo('elevator1')">엘리베이터</button><br>
+    <button onclick="goTo('office')">회의실</button><br>
  </div>     
+
+      <!-- 회의실 --> 
+    <div id="office" class="hidden">
+    <p><span style="font-weight: bold;">[회의실]</span><br><br>누군가가 밤낮으로 준비한 자료가 <span style="color: #3f40d3;">사무용 책상</span>위에 한가득 쌓인 회의실.<br>막 워크숍이 진행된 참이라 어수선하지만, 그런 풍경이 오히려 이 자리를 준비해 준 사람의 열의를 느끼게 한다. <br><br>자료들 틈에 [가챠 5회 무료 쿠폰]이 숨어 있었다.</p>
+    <button onclick="goTo('pcdesk')">사무용 책상</button>
+    <button class="nav-button" onclick="goTo('2ndfloor')">나가기</button>
+  </div>
+
+      <!-- 회의실 : 사무용 책상 --> 
+    <div id="pcdesk" class="hidden">
+    <p><span style="font-weight: bold;">[회의실]/[사무용 책상]</span><br><br>모서리에 부딪힘 방지 안전 쿠션이 붙어 있다.</p>
+    <button class="nav-button" onclick="goTo('office')">나가기</button>
+  </div>
   
     <!-- 3층 --> 
     <div id="3rdfloor" class="hidden">
@@ -1480,8 +1532,8 @@ function goTo(page) {
     currentUser.coin = (currentUser.coin || 0) + 2;
     updateCoinDisplay();
   }
-  if (['anma1'].includes(page)) {
-    currentUser.anma = 1;
+  if (['gardenflower'].includes(page)) {
+    currentUser.key = 1;
     updateCoinDisplay();
   }
     if (['slide4'].includes(page)) {
@@ -1662,6 +1714,17 @@ function goBack() {
 
 
 //여기서부터 특정 장소에서 사용하도록 되어 있는 함수!!!!
+//★★★★★헌화★★★★★
+function giveflower(buttonId) {
+  if (currentUser.key === 1) {
+    // 버튼 제거
+    const btn = document.getElementById(buttonId);
+    if (btn) btn.remove();  // 단 한 번만 제거
+    goTo('flowerpage');
+  } else {
+    alert("꽃을 가지고 있지 않다. 어디서 구할 수 있을까...");
+  }
+}
 //★★★★모노폴리★★★★
 function mnplPOW(buttonId) {
   if (currentUser.POW <= 2) {
