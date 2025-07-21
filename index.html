@@ -1297,6 +1297,16 @@
         POW: 5,
         LUC: 2,
         key: 0,
+        coin: 0},
+                       lore0609: {
+        class: "기록자 로렘",
+        id: "LoremIpsum",
+        STR: 6,
+        INT: 6,
+        OBS: 6,
+        POW: 6,
+        LUC: 6,
+        key: 0,
         coin: 0} 
     };
 
@@ -1325,9 +1335,12 @@
       setTimeout(() => {
         container.remove();
         showUserInfo();
-        document.getElementById('main-page').classList.remove('hidden');
-        pageHistory.push('main-page');
-      }, 3600);
+            // ✅ 특정 아이디면 lore01으로 보냄
+    if (currentUser.id === "LoremIpsum") {
+      goTo("lore01");
+    } else {
+      goTo("main-page"); // 기본 진입 페이지
+    }
     }
 //★★★★★유저 인포메이션 창★★★★★
     function showUserInfo() {
