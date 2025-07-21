@@ -23,7 +23,7 @@ function loadFinalReport() {
     { html: `<span style="color: black;">Coin : ${currentUser.coin}</span>`, align: 'left', lineStyle: 'color: black;' }
   ];
 
-  if (currentUser.key === 1) {
+  if (currentUser.office) {
     lines.push({ html: `<div style="color: black; font-style: italic;">[가챠 5회 무료 쿠폰]을 획득했다. 코인 대신 쓸 수 있다 …</div>`, align: 'right', lineStyle: 'color: black; font-style: italic;' });
   }
   if (currentUser.gongmo && currentUser.gongmo.length > 0) {
