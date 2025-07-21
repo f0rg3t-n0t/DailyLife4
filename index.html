@@ -318,9 +318,10 @@
 
   <!-- 내부 1층 --> 
   <div id="inside" class="hidden">
-    <p><span style="font-weight: bold;">[건물 1층]</span><br><br>대리석 바닥이 반짝거리는 건물 1층.<br>정면에 방문객을 맞이하는 <span style="color: #3f40d3;">로비</span>가 보이고, 로비 뒤편에는 뒤편에는 유리로 된 <span style="color: #3f40d3;">엘리베이터</span>가 배치되어 있어 시선이 저절로 천장을 향한다.</p>
+    <p><span style="font-weight: bold;">[건물 1층]</span><br><br>대리석 바닥이 반짝거리는 건물 1층.<br>정면에 방문객을 맞이하는 <span style="color: #3f40d3;">로비</span>가 보이고, 로비 뒤편에는 뒤편에는 유리로 된 <span style="color: #3f40d3;">엘리베이터</span>가 배치되어 있어 시선이 저절로 천장을 향한다.<br>더 안쪽에 있는 복도는 <span style="color: #3f40d3;">레스토랑</span>으로 이어지는 듯하다.</p>
     <button onclick="goTo('lobby')">로비</button>
-    <button onclick="goTo('elevator')">엘리베이터</button><br>
+    <button onclick="goTo('elevator')">엘리베이터</button>
+    <button onclick="goTo('restaurant')">레스토랑</button><br><br>
     <button class="nav-button" onclick="goTo('starting-point')">건물 입구로 돌아가기</button>
   </div>
 
@@ -346,9 +347,71 @@
     <button class="nav-button" onclick="goTo('lobby')">나가기</button>
  </div>
 
+      <!-- 레스토랑 --> 
+    <div id="restaurant" class="hidden">
+    <p><span style="font-weight: bold;">[레스토랑]</span><br><br>이곳에 모인 초세계급들의 식사를 책임지는 레스토랑. 식사를 하며 바깥 풍경을 바라볼 수 있도록 유리창이 나 있다.
+    <br>멋들어진 양탄자를 따라 내부로 들어가면 긴 <span style="color: #3f40d3;">테이블</span>이 놓여 있다.</p>
+    <button onclick="goTo('table')">테이블</button>
+      <button class="nav-button" onclick="goTo('inside')">나가기</button>
+  </div>
+
+    <!-- 레스토랑 : 테이블 --> 
+  <div id="table" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+  1일 3회, 식사 시간마다 각종 음식이 차려지곤 하는 테이블. 다양한 문화와 취향, 영양소까지 고루 고려한 식사가 나온다.<br>
+  지금은 식사 대신... 자본을 이용해 상대를 파산시켜야 하는 보드게임 판이 펼쳐져 있다?!<br>상대는 로봇 팔인 모양이지만...</p>
+ <button id="monopl" onclick="goTodel('monopoly', 'monopl')">게임에 도전한다</button><br>
+  <button class="nav-button" onclick="goTo('table')">나가기</button>
+  </div>
+
+    <!-- 모노폴리 --> 
+  <div id="monopoly" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+이런 게임에 도전할 때 가장 중요한 것은 뭐니뭐니해도 전략.<br>어떤 전략을 선택하지?</p>
+  <button onclick="goTo('monopoly1')">담대한 베팅으로 한 판 승부를 노린다</button>   
+  <button onclick="goTo('monopoly2')">상대의 수를 읽으며 신중하게 선택한다</button>   
+  <button onclick="goTo('monopoly3')">모든 것을 운에 맡긴다</button>   
+  </div>
+
+      <!-- 모노폴리:정신 --> 
+  <div id="monopoly1" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+담대하게 베팅하기로 했다. 결과는...?</p>
+<button id="mp1btn" onclick="mnplPOW('mp1btn')">끝까지 플레이한다</button>
+  </div>
+  
+      <!-- 모노폴리:정신 --> 
+  <div id="monopoly2" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+신중하게 베팅하기로 했다. 결과는...?</p>
+<button id="mp2btn" onclick="mnplINT('mp2btn')">끝까지 플레이한다</button>
+  </div>
+
+        <!-- 모노폴리:정신 --> 
+  <div id="monopoly3" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+전부 운에 맡기기로 했다. 결과는...?</p>
+<button id="mp3btn" onclick="mnplLUC('mp3btn')">끝까지 플레이한다</button>
+  </div>
+
+      <!-- 모노폴리:승 --> 
+  <div id="monopolywin" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+로봇과의 승부에서 완전한 승리를 거뒀다!<br>로봇 손이 잠시 테이블 아래로 사라지더니... 코인 2개와 함께 돌아온다.<br><br><span style="font-weight: bold;">2코인을 획득했다.</span></p>
+  <button class="nav-button" onclick="goTo('table')">나가기</button>
+  </div>
+
+        <!-- 모노폴리:패 --> 
+  <div id="monopolywin" class="hidden">
+  <p><span style="font-weight: bold;">[레스토랑]/[테이블]</span><br><br>
+최선을 다했지만... 참패하고 말았다. 이 전략이 잘 맞지 않았던 건가...?!<br>그래도 참가상인지, 로봇 손이 코인 1개를 손에 쥐여 준다.<br><br><span style="font-weight: bold;">1코인을 획득했다.</span></p>
+  <button class="nav-button" onclick="goTo('table')">나가기</button>
+  </div>
+
+  
   <!-- 백사장 : 음료 디스펜서 --> 
   <div id="dispenser" class="hidden">
-  <p><span style="font-weight: bold;">[카페]/[카페 카운터]<br>[메뉴판]</span><br><br>
+  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
   커피나 차 등의 음료를 자유롭게 이용 가능한 디스펜서.<br>기본적인 음료는 물론, 여러 가지 맛의 원두와 티백, 시럽도 비치되어 있어 얼마든지 원하는 음료를 제조 가능할 것 같다.<br>
   한쪽에는 '랜덤 디스펜서 : 1일 3회 이용 가능' 이라고 적힌 익숙한 상자가 있다.<br>그러고 보니 랜덤 음료 응모함이 보이지 않는다. 이제 공모전은 끝인 걸까?</p>
   <button onclick="goTo('dispenser1')">음료를 뽑는다</button><br>
@@ -357,7 +420,7 @@
   
   <!-- 카페 : 음료 디스펜서 1 (음료를 뽑는다) -->
   <div id="dispenser1" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[음료 디스펜서]</span><br><br>
+  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
   원하는 음료를 가져가거나 랜덤 디스펜서를 이용해 보자. 랜덤 디스펜서는 1일 3회 사용 제한이 있다.<br><br>이번 주의 랜덤 디스펜서 테마는 '싫어하는 사람에게 주고 싶은 음료'라고 한다.</p>
   <button onclick="selectDrink('mango')">망고 주스</button>
   <button onclick="selectDrink('soda')">소다 플로트</button>
@@ -369,7 +432,7 @@
 
     <!-- 영화관 : 음료 디스펜서 2 (음료 공모전) -->
   <div id="dispenser2" class="hidden">
-  <p><span style="font-weight: bold;">[레스토랑]/[음료 디스펜서]</span><br><br>
+  <p><span style="font-weight: bold;">[백사장]/[음료 디스펜서]</span><br><br>
   "다음 주의 랜덤 음료 공모전 테마는... ＜싫어하는 사람에게 권하고 싶은 음료＞! <br>유언집행자 여러분의 많은 참여 바랍니다!"<br><br>...라고 쓰여 있다. 한 사람당 2개까지 응모 가능한 모양이다.</p>
    <input type="text" id="gongmo">
   <div id="gongmobox" style="display: block; margin-top: 1em;">
@@ -1539,20 +1602,30 @@ function goBack() {
 
 
 //여기서부터 특정 장소에서 사용하도록 되어 있는 함수!!!!
-//★★★★오마카세★★★★
-function omakase(buttonId) {
-  if (currentUser.LUC <= 1) {
-    goTo('menupan3');
-  } else if (currentUser.LUC == 2) {
-    goTo('menupan4');
-  } else if (currentUser.LUC == 3) {
-    goTo('menupan5');
-  } else if (currentUser.LUC == 4) {
-    goTo('menupan6');
-  } else if (currentUser.LUC == 5) {
-    goTo('menupan7');
+//★★★★모노폴리★★★★
+function mnplPOW(buttonId) {
+  if (currentUser.POW <= 2) {
+    goTo('monopolylose');
   } else {
-    goTo('menupan7');
+    goTo('monopolywin');
+  }
+    const btn = document.getElementById(buttonId);
+    if (btn) btn.remove()  // 단 한 번만 제거
+}
+function mnplINT(buttonId) {
+  if (currentUser.INT <= 2) {
+    goTo('monopolylose');
+  } else {
+    goTo('monopolywin');
+  }
+    const btn = document.getElementById(buttonId);
+    if (btn) btn.remove()  // 단 한 번만 제거
+}
+function mnplLUC(buttonId) {
+  if (currentUser.LUC <= 2) {
+    goTo('monopolylose');
+  } else {
+    goTo('monopolywin');
   }
     const btn = document.getElementById(buttonId);
     if (btn) btn.remove()  // 단 한 번만 제거
