@@ -656,7 +656,7 @@
 
       <!-- 회의실 --> 
     <div id="office" class="hidden">
-    <p><span style="font-weight: bold;">[회의실]</span><br><br>누군가가 밤낮으로 준비한 자료가 <span style="color: #3f40d3;">사무용 책상</span>위에 한가득 쌓인 회의실.<br>막 워크숍이 진행된 참이라 어수선하지만, 그런 풍경이 오히려 이 자리를 준비해 준 사람의 열의를 느끼게 한다. <br><br>자료들 틈에 [가챠 5회 무료 쿠폰]이 숨어 있었다.</p>
+    <p><span style="font-weight: bold;">[회의실]</span><br><br>누군가가 밤낮으로 준비한 자료가 <span style="color: #3f40d3;">사무용 책상</span> 위에 한가득 쌓인 회의실.<br>막 워크숍이 진행된 참이라 어수선하지만, 그런 풍경이 오히려 이 자리를 준비해 준 사람의 열의를 느끼게 한다. <br><br>자료들 틈에 [가챠 5회 무료 쿠폰]이 숨어 있었다.</p>
     <button onclick="goTo('pcdesk')">사무용 책상</button><br>
     <button class="nav-button" onclick="goTo('2ndfloor')">나가기</button>
   </div>
@@ -759,7 +759,7 @@
     <!-- 도서관 --> 
     <div id="library" class="hidden">
     <p><span style="font-weight: bold;">[도서관]</span><br><br>장서의 종류별로 정리된 책장이 숲처럼 펼쳐진다.<br>지식의 보고라고 불리기에 손색없을 정도의 대형 도서관.<br><span style="color: #3f40d3;">열람실</span> 안에 들어가서 독서를 즐길 수 있을 것 같다.</p>
-      <button id="ffff" onclick="goTodel('readroom', 'ffff')">열람실</button>
+      <button id="ffff" onclick="goTodel('readroom', 'ffff')">열람실</button><br>
     <button class="nav-button" onclick="goTo('3rdfloor')">나가기</button>
     </div>   
 
@@ -889,7 +889,7 @@
     <div id="zari1" class="hidden">
     <p><span style="font-weight: bold;">[카페]</span><br><br>
 혼자 온 손님에게는 맞은편 자리에 동물 인형을 놓아 주는 것 같다.<br>공허한 눈의 펭귄 인형이 이쪽을 바라본다...</p>
-    <button onclick="goTo('zari2')">"안녕?" (말을 건다)</button><br>
+    <button id="loolo" onclick="goTodel('zari2', 'loolo')">"안녕?" (말을 건다)</button><br>
     <button class="nav-button" onclick="goTo('cafe')">나가기</button>
     </div>   
 
@@ -1481,7 +1481,7 @@ function goTo(page) {
   clearOutputs();
   pageHistory.push(page);
   //[중요]특정 페이지 진입 시 스탯(코인 등)변동
-  if (['inst1','inst2','inst3','readroom','strange1','zone1-5'].includes(page)) {
+  if (['inst1','inst2','inst3','readroom','strange1','zone1-5','zari2'].includes(page)) {
     currentUser.coin = (currentUser.coin || 0) + 1;
     updateCoinDisplay();
   }
